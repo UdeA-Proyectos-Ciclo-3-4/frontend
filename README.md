@@ -1,4 +1,5 @@
 # FrontEnd
+Proyecto de sitema de ventas virtuales y fisicas para una empresa de manufactura.
 
 ## Sprint 0
 
@@ -8,4 +9,5 @@
 ### Development Team
 - **Desarrollador:** Alba Lucia Guzmán Petro
 - **Analista:** Juan Carlos Jiménez Gutiérrez
-- **Administrador DB:** Luisa María Matoma Sanchez
+- **Administrador DB:** Luisa María Matoma Sanchez (lifelm2004@gmail.com)
+
