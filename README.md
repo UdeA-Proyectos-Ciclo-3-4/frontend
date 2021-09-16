@@ -9,6 +9,6 @@ Nuestro tablero de Kanvas lo puedes encontrar en: [Trello](https://trello.com/b/
 
 
 ### Development Team
-- **Desarrollador:** Alba Lucia Guzmán Petro
+- **Desarrollador:** Alba Lucia Guzmán Petro albal-guzmanp@unilibre.edu.co
 - **Analista:** Juan Carlos Jiménez Gutiérrez
 - **Administrador DB:** Luisa María Matoma Sanchez (lifelm2004@gmail.com)
