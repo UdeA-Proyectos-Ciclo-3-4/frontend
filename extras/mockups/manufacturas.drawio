@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pHabFzZdmSG_OoKOG0Jx" name="login">
-        <mxGraphModel dx="582" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1614" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="qgdBl2eilUrx8372IIqp-0"/>
                 <mxCell id="qgdBl2eilUrx8372IIqp-1" parent="qgdBl2eilUrx8372IIqp-0"/>
@@ -8,7 +8,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="0rYGssFCJk7xpBtu5iQj" name="vendedores">
-        <mxGraphModel dx="582" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1614" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
