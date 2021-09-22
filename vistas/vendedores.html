@@ -44,20 +44,68 @@
         </nav>
 
     </header>
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar/Editar Vendedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Especialidad</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pendiente..">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Celular</label>
+                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Ej. 310..">
+                    </div>
+                    <caption>Ultima fecha de ingreso 2021-09-21</caption>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar vendedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Desea eliminar el vendedor?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="container">
 
         <div class="row mt-4">
             <div class="col col-md-3">
                 <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action">
+                    <a href="#" class="list-group-item list-group-item-action">
                         <i class="fas fa-cash-register"></i> Ventas
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action">
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
                         <i class="fas fa-users"></i> Usuarios
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                    </a>
+                    <a href="vendedores.html" class="list-group-item list-group-item-action active" aria-current="true">
                         <i class="fas fa-user-tag"></i> Vendedores
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="col col-md-9">
@@ -66,8 +114,8 @@
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> Vendedor
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </ul>
                             <form class="d-flex">
@@ -99,8 +147,8 @@
                             <td>319.320.3455</td>
                             <td>2021-09-01</td>
                             <td class="icons">
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                         <tr>
@@ -110,8 +158,8 @@
                             <td>311.430.1232</td>
                             <td>2021-09-01</td>
                             <td class="icons">
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                         <tr>
@@ -121,8 +169,8 @@
                             <td>311.902.4563</td>
                             <td>2021-04-03</td>
                             <td class="icons">
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                         <tr>
@@ -132,8 +180,8 @@
                             <td>300.211.5211</td>
                             <td>2021-03-23</td>
                             <td class="icons">
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                         <tr>
@@ -143,8 +191,8 @@
                             <td>315.712.6113</td>
                             <td>2021-02-11</td>
                             <td class="icons">
-                                <i class="fas fa-edit"></i>
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                     </tbody>
