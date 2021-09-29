@@ -1,8 +1,15 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "author": "Juan Carlos Jiménez Gutiérrez <jcjimenez29@misena.edu.co>",
+  "author": "Equipo: node_modules, Grupo 28-29-30 (UdeA) <jcjimenez29@misena.edu.co>",
   "description": "FrontEnd (React): Proyecto Mision TIC, Ciclo 3 (App  de seguimiento de las ventas de un producto y/o servicio en una empresa)",
+  "contributors": [
+    "Alba Lucia Guzmán Petro <albal-guzmanp@unilibre.edu.co> (https://github.com/LuchyGuzman)",
+    "Miguel Ángel Salazar Pérez <miguelsalazar77@hotmail.com> (https://github.com/masp4040)",
+    "Luisa María Matoma Sanchez <lifelm2004@gmail.com> (https://github.com/Lmatoma)",
+    "Lady Carolina Porras González <ydalk3@gmail.com> (https://github.com/ydalk)",
+    "Juan Carlos Jiménez Gutiérrez <jcjimenez29@misena.edu.co> (https://github.com/jcarlosj)"
+  ],
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
