@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manufacturas - Ventas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
+
 <body>
     <header class="container">
-        
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manufacturas</a>
+                <a class="navbar-brand" href="#">
+                    <img src="./images/logo2.png" alt="" width="30" height="24" class="d-inline-block align-text-top" /> Manufacturas
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!-- <li class="nav-item">
@@ -33,8 +36,12 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
                                     <li><a class="dropdown-item" href="#">Configuración</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="login.html">Logout</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -42,24 +49,132 @@
                 </div>
             </div>
         </nav>
-
     </header>
 
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar/Editar Ventas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Cliente</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. Maria Perez"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Descripcion</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. producto.."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Total</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. $ 15.000."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Fecha inicial</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. 2021/09/02."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Fecha de pago</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. 2021/09/10."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Responsable</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ej. Juan torres"
+              />
+            </div>
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option selected>Seleccione estado de venta</option>
+                <option value="1">Creacion</option>
+                <option value="2">Embalaje</option>
+                <option value="3">Despacho</option>
+                <option value="4">Ruta</option>
+                <option value="5">Ubicacion</option>
+                <option value="6">Recepcion</option>
+              </select>
+              <label for="floatingSelect">Estado</label>
+                    </div>
+                    <br />
+                    <caption>
+                        Ultima fecha de ingreso 2021-09-21
+                    </caption>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar ventas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Desea eliminar la venta?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+                    <button type="button" class="btn btn-primary">Eliminar</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <main class="container">
-
         <div class="row mt-4">
             <div class="col col-md-3">
                 <div class="list-group">
@@ -84,20 +199,22 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                    <i class="fas fa-plus"></i>
+                  </button>
                             </ul>
                             <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Ej: Pepito Perez" aria-label="Search">
+                                <input class="form-control me-2" type="search" placeholder="Ej: Pepito Perez" aria-label="Search" />
                                 <button class="btn btn-outline-success" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
+                    <i class="fas fa-search"></i>
+                  </button>
                             </form>
                         </div>
                     </div>
                 </nav>
                 <table class="table">
-                    <caption>Listado de ventas activas 2021</caption>
+                    <caption>
+                        Listado de ventas activas 2021
+                    </caption>
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">ID</th>
@@ -109,28 +226,27 @@
                             <th scope="col">Responsable</th>
                             <th scope="col">Estado</th>
                             <th scope="col">&nbsp;</th>
-                           
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            
+
                             <td>Pepito Perez</td>
                             <td>Botas</td>
                             <td>$120000</td>
                             <td>2021-09-01</td>
                             <td>2021-09-05</td>
-                            <td>Miguel </td>
-                            <td>Creacion </td>
-                                <td class="icons">
+                            <td>Miguel</td>
+                            <td>Creacion</td>
+                            <td class="icons">
                                 <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                 <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            
+
                             <td>Alexa Mendez</td>
                             <td>Zandalias</td>
                             <td>$80000</td>
@@ -138,7 +254,7 @@
                             <td>2021-10-03</td>
                             <td>Luisa</td>
                             <td>Embalaje</td>
-                            
+
                             <td class="icons">
                                 <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                 <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
@@ -146,7 +262,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            
+
                             <td>Nestor Ramos</td>
                             <td>Guantes</td>
                             <td>$45000</td>
@@ -161,7 +277,7 @@
                         </tr>
                         <tr>
                             <td>4</td>
-                            
+
                             <td>Diego Prieto</td>
                             <td>Bolso</td>
                             <td>$80000</td>
@@ -176,7 +292,7 @@
                         </tr>
                         <tr>
                             <td>5</td>
-                            
+
                             <td>Daniel Santos</td>
                             <td>Cinturon</td>
                             <td>$25000</td>
@@ -206,10 +322,10 @@
                 </nav>
             </div>
         </div>
-
     </main>
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
+
 </html>
