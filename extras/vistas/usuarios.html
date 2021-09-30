@@ -14,7 +14,16 @@
         
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manufacturas</a>
+                <a class="navbar-brand" href="#">
+                    <img
+                      src="./images/logo2.png"
+                      alt=""
+                      width="30"
+                      height="24"
+                      class="d-inline-block align-text-top"
+                    />
+                    Manufacturas
+                  </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,17 +68,13 @@
                     </div>
                     <div class="form-floating">
                         <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                          <option selected>Escoge un rol</option>
-                          <option value="1">Vendedores</option>
-                          <option value="2">Administrador</option>
-                          <option value="3">Ejecutivo</option>
-                          <option value="3">Operario</option>
-                          <option value="3">Director</option>
-                          <option value="3">Gerente Comercial</option>
+                          <option selected>Seleccione...</option>
+                          <option value="1">Administrador</option>
+                          <option value="2">Vendedor</option>
+                          <option value="3">Comprador</option>
                         </select>
                         <label for="floatingSelect">Roles</label>
                       </div>
-                    <caption>Ultima fecha de ingreso 2021-09-21</caption>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -101,15 +106,32 @@
         <div class="row mt-4">
             <div class="col col-md-3">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <i class="fas fa-cash-register"></i> Ventas
-                    </a>
-                    <a href="Usuario_roles.html" class="list-group-item list-group-item-action active" aria-current="true">
-                        <i class="fas fa-user-tag"></i> Usuarios
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <i class="fas fa-user-tag"></i> Vendedores
-                    </a>
+                    <a
+                    href="ventas.html"
+                    class="list-group-item list-group-item-action"
+                  >
+                    <i class="fas fa-cash-register"></i> Ventas
+                  </a>
+                  <a
+                    href="usuarios.html"
+                    class="list-group-item list-group-item-action active"
+                  >
+                    <i class="fas fa-users"></i> Usuarios
+                  </a>
+                  <a
+                    href="productos.html"
+                    class="list-group-item list-group-item-action"
+                    aria-current="true"
+                  >
+                    <i class="fab fa-product-hunt"></i> Productos
+                  </a>
+                  <a
+                    href="vendedores.html"
+                    class="list-group-item list-group-item-action"
+                    aria-current="true"
+                  >
+                    <i class="fas fa-user-tag"></i> Vendedores
+                  </a>
                 </div>
             </div>
             <div class="col col-md-9">
@@ -163,7 +185,7 @@
                         <tr>
                             <td>3</td>
                             <td>Manuela Gomez</td>
-                            <td>Ejecutivo</td>
+                            <td>Comprador</td>
                             <td class="icons">
                                 <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                 <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
@@ -172,7 +194,7 @@
                         <tr>
                             <td>4</td>
                             <td>Elisa Giraldo</td>
-                            <td>Director</td>
+                            <td>Comprador</td>
                             <td class="icons">
                                 <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                 <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
@@ -181,7 +203,7 @@
                         <tr>
                             <td>5</td>
                             <td>Juliana Puerta</td>
-                            <td>Operario</td>
+                            <td>Vendedor</td>
                             <td class="icons">
                                 <i class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                 <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
