@@ -1,10 +1,10 @@
 import React from "react";
+import AppRouter from "./Routers/AppRouter";
 
 function App() {
   return (
     <>
-      <h1> Componente Principal</h1>
-      <p className="descripcion"> componente App preparado para iniciar</p>
+      <AppRouter />
     </>
   );
 }
