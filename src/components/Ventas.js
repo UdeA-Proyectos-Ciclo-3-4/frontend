@@ -31,6 +31,7 @@ const Ventas = () => {
                     </div>
                     <div className="col col-md-9">
 
+
                         { /* Component Modal (Add) react-bootstrap */ }
                         <Modal
                             show={ showAdd }
@@ -449,6 +450,8 @@ const Ventas = () => {
                             </ul>
                         </nav>
 
+
+                        
 
                     </div>
                 </div>
