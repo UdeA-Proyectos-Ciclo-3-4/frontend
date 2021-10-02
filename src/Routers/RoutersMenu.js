@@ -5,8 +5,6 @@ import Productos from "../components/Productos"
 import Usuarios from "../components/Usuarios";
 import Vendedores from "../components/Vendedores";
 import Ventas from "../components/Ventas";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 
 const RoutersMenu = () => {
