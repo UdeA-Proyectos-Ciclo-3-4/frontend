@@ -141,7 +141,7 @@ const Usuarios = () => {
                                     <input
                                         class="form-control me-2"
                                         type="search"
-                                        placeholder="Ej: Tennis para niña"
+                                        placeholder="Ej: Leonardo Linero"
                                         aria-label="Search"
                                     />
                                     <button class="btn btn-outline-success" type="submit">
