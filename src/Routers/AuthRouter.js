@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from "../components/Login";
 import Registrarse from "../components/Registrarse";
+import RecuperarContraseña from '../components/RecuperarContraseña';
 
 const AuthRouter = () => {
     return (
@@ -17,6 +18,11 @@ const AuthRouter = () => {
                         exact
                         path="/auth/registro"
                         component={ Registrarse }
+                    />
+                    <Route 
+                        exact
+                        path="/auth/contraseña"
+                        component={ RecuperarContraseña }
                     />
 
                     <Redirect to="/auth/ingresar" />
