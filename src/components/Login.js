@@ -1,10 +1,12 @@
 import React from 'react'
+import Header from "./Header";
+import Footer from './Footer'
 
 const Login = () => {
     return (
-        <div>
+        <>
             <h1>Componente Login</h1>
-        </div>
+       </>
     )
 }
 

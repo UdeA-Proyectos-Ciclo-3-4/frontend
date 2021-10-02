@@ -19,7 +19,7 @@ const AuthRouter = () => {
                         component={ Registrarse }
                     />
 
-                    <Redirect to="/auth/login" />
+                    <Redirect to="/auth/ingresar" />
 
 
                 </Switch>

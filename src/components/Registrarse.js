@@ -1,10 +1,14 @@
 import React from 'react'
+import Header from "./Header";
+import Footer from './Footer'
 
 const Registrarse = () => {
     return (
-        <div>
-            <h1>Componente Registrarse</h1>
-        </div>
+        <>
+            
+            <h1>Componente Registro</h1>
+            
+        </>
     )
 }
 

@@ -5,6 +5,8 @@ import Productos from "../components/Productos"
 import Usuarios from "../components/Usuarios";
 import Vendedores from "../components/Vendedores";
 import Ventas from "../components/Ventas";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const RoutersMenu = () => {
@@ -12,8 +14,6 @@ const RoutersMenu = () => {
         <div>
             
             <div className="row">
-                
-
                 <div className="col-10" id="panelCtrl">
 
                     <Switch>

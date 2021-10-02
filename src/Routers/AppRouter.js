@@ -7,29 +7,32 @@ import {
 } from "react-router-dom";
 import RoutersMenu from './RoutersMenu';
 import AuthRouter from './AuthRouter';
+import Header from "../components/Header";
+import Footer from '../components/Footer';
 
 const AppRouter = () => {
     return (
         <>
         <Router>
-            <div>
-                <Switch>
-                    <Route
-                        path="/auth"
-                        children={<AuthRouter />}
-                    />
+            <Header />
+                    <div>
+                        <Switch>
+                            <Route
+                                path="/auth"
+                                children={<AuthRouter />}
+                            />
 
-                    <Route
-                        path="/"
-                        children={ <RoutersMenu /> }
-                    />
+                            <Route
+                                path="/"
+                                children={ <RoutersMenu /> }
+                            />
 
-                    <Redirect to="/auth/login" />
+                            <Redirect to="/auth/ingresar" />
 
-                </Switch>
-            </div>
+                        </Switch>
+                    </div>
+            <Footer />
         </Router>
-            
         </>
     )
 }
