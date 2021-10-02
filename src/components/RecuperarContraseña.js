@@ -1,7 +1,17 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useState} from 'react';
+import {Link, useHistory} from "react-router-dom";
+import {Button, Modal} from 'react-bootstrap';
 
 const RecuperarContraseña = () => {
+
+    const [show, setShow] = useState(false);
+    const history = useHistory();
+
+    const handleClose = () => { 
+        setShow(false)
+        history.push('/auth/ingresar');
+    };
+    const handleShow = () => setShow(true);
     return (
         <>
             <div class="mt-5 container-fluid">
@@ -18,42 +28,29 @@ const RecuperarContraseña = () => {
                             placeholder="correo@ejemplo.com "
                             />
                         </div>
-                        <Link to={"/auth/ingresar"} 
+                        <Button variant="secondary"
                             class="btn btn-outline-secondary" 
                             role="button"
                             data-bs-toggle="modal"
                             data-bs-target="#confirModal"
+                            onClick={handleShow}
                         >Enviar
-                        </Link>
+                        </Button>
                     </div>
-                </div>
-                <div class="modal fade" id="confirModal" tabindex="-1" aria-labelledby="confirModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <i class="far fa-bell"></i>
-                                <a href="./login.html">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    Se ha enviado un correo electronico con un enlace para que cambies tu contraseña
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="./login.html">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    Cerrar
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>  
+
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>Contraseña Recuperada</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Se ha enviado un correo electronico con un enlace para que cambies tu contraseña</Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Cerrar
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         </>
     )
 }
