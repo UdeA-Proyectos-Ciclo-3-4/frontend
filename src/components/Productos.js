@@ -20,7 +20,7 @@ const Productos = () => {
 
     const handleCloseDelete = () => setShowDelete(false);
     const handleShowDelete = () => setShowDelete(true);
-  
+
 
     return (
         <div className="container mb-5 pb-5 mt-5 pt-5">
@@ -366,18 +366,18 @@ const Productos = () => {
                     </table>
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-end">
-                            <li className="page-item disabled"><Link className="page-link">Anterior</Link></li>
-                            <li className="page-item"><Link className="page-link" href="#">1</Link></li>
-                            <li className="page-item"><Link className="page-link" href="#">2</Link></li>
-                            <li className="page-item"><Link className="page-link" href="#">3</Link></li>
-                            <li className="page-item"><Link className="page-link" href="#">Siguiente</Link></li>
+                            <li className="page-item disabled"><Link to={ "" } className="page-link">Anterior</Link></li>
+                            <li className="page-item"><Link to={ "" } className="page-link" href="#">1</Link></li>
+                            <li className="page-item"><Link to={ "" } className="page-link" href="#">2</Link></li>
+                            <li className="page-item"><Link to={ "" } className="page-link" href="#">3</Link></li>
+                            <li className="page-item"><Link to={ "" } className="page-link" href="#">Siguiente</Link></li>
                         </ul>
                     </nav>
 
 
                 </div>
             </div>
-        </div> 
+        </div>
     )
 }
 

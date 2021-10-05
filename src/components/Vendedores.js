@@ -349,11 +349,11 @@ const Vendedores = () => {
                         </table>
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-end">
-                                <li class="page-item disabled"><Link class="page-link">Anterior</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">1</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">2</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">3</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">Siguiente</Link></li>
+                                <li class="page-item disabled"><Link to={ "" } class="page-link">Anterior</Link></li>
+                                <li class="page-item"><Link to={ "" } class="page-link" href="#">1</Link></li>
+                                <li class="page-item"><Link to={ "" } class="page-link" href="#">2</Link></li>
+                                <li class="page-item"><Link to={ "" } class="page-link" href="#">3</Link></li>
+                                <li class="page-item"><Link to={ "" } class="page-link" href="#">Siguiente</Link></li>
                             </ul>
                         </nav>
  
