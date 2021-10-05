@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import Menu from "./Menu";
+import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-// Definicion del Functional Component
+import Menu from './Menu';
+
+// Functional Component
 const Usuarios = () => {
 
     // Define estado del Component
@@ -295,11 +297,11 @@ const Usuarios = () => {
                         </table>
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-end">
-                                <li class="page-item disabled"><a class="page-link">Anterior</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                                <li class="page-item disabled"><Link class="page-link">Anterior</Link></li>
+                                <li class="page-item"><Link class="page-link" href="#">1</Link></li>
+                                <li class="page-item"><Link class="page-link" href="#">2</Link></li>
+                                <li class="page-item"><Link class="page-link" href="#">3</Link></li>
+                                <li class="page-item"><Link class="page-link" href="#">Siguiente</Link></li>
                             </ul>
                         </nav>
 
