@@ -1,15 +1,18 @@
-import React from 'react'
-import { Switch, Route, Redirect } from "react-router-dom";
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+// Components
 import Login from "../components/Login";
-import Productos from "../components/Productos"
+import Productos from '../components/products/Products';
 import Usuarios from "../components/Usuarios";
 import Vendedores from "../components/Vendedores";
 import Ventas from "../components/Ventas";
 
+// Functional Component
 const RoutersMenu = () => {
     return (
         <div>
-            
+
             <div className="row">
                 <div className="col-10" id="panelCtrl">
 

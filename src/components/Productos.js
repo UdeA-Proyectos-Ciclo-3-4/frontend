@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import Menu from './Menu';
