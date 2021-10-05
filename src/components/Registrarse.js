@@ -1,15 +1,12 @@
-import React from 'react'
-import Header from "./Header";
-import Footer from './Footer'
+import React from 'react';
 
+// Functional Component
 const Registrarse = () => {
     return (
         <>
-            
             <h1>Componente Registro</h1>
-            
         </>
     )
 }
 
-export default Registrarse
+export default Registrarse;
