@@ -27,7 +27,7 @@ const Login = () => {
                         />
                     </div>
                     <Link to={"/vendedores"}
-                        class="btn btn-outline-secondary"
+                        className="btn btn-outline-secondary"
                         role="button"
                     >Iniciar Sesión</Link>
                     <Link to={"/auth/contraseña"}>

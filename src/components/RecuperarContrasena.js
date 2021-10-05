@@ -16,23 +16,23 @@ const RecuperarContrasena = () => {
     const handleShow = () => setShow(true);
 
     return (
-        <div class="mt-5 container-fluid">
-            <h3 class="row justify-content-center">Recupera tu contraseña</h3>
-            <h5 class="row justify-content-center">Ingresa tu correo electrónico</h5>
-            <div class="mt-5 container-fluid col col-md-4">
-                <div class="m-auto row justify-content-center align-items-center">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1 " class="form-label">Correo electronico</label>
+        <div className="mt-5 container-fluid">
+            <h3 className="row justify-content-center">Recupera tu contraseña</h3>
+            <h5 className="row justify-content-center">Ingresa tu correo electrónico</h5>
+            <div className="mt-5 container-fluid col col-md-4">
+                <div className="m-auto row justify-content-center align-items-center">
+                    <div className="mb-3">
+                        <label for="exampleFormControlInput1 " className="form-label">Correo electronico</label>
                         <input
                             type="email"
-                            class="form-control"
+                            className="form-control"
                             id="exampleFormControlInput1"
                             placeholder="correo@ejemplo.com"
                         />
                     </div>
                     <Button
                         variant="secondary"
-                        class="btn btn-outline-secondary"
+                        className="btn btn-outline-secondary"
                         role="button"
                         data-bs-toggle="modal"
                         data-bs-target="#confirModal"

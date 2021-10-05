@@ -42,38 +42,38 @@ const Vendedores = () => {
                             <Modal.Title>Agregar Vendedor</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input
                                         type="text"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. Eva Sofia"
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Especialidad</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Especialidad</label>
                                     <input
                                         type="text"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Pendiente.."
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Celular</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Celular</label>
                                     <input
                                         type="tel"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. 310.."
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Fecha Ingreso</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
                                     <input
                                         type="date"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. 2021-09-01"
                                     />
@@ -99,38 +99,38 @@ const Vendedores = () => {
                             <Modal.Title>Editar Vendedor</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input
                                         type="text"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. Eva Sofia"
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Especialidad</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Especialidad</label>
                                     <input
                                         type="text"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Pendiente.."
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Celular</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Celular</label>
                                     <input
                                         type="tel"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. 310.."
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Fecha Ingreso</label>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
                                     <input
                                         type="date"
-                                        class="form-control"
+                                        className="form-control"
                                         id="exampleFormControlInput1"
                                         placeholder="Ej. 2021-09-01"
                                     />
@@ -168,34 +168,34 @@ const Vendedores = () => {
                             </Modal.Footer>
                         </Modal>    { /* End - Component Modal (Eliminar) react-bootstrap */ }
  
-                        <h2 class="center">Listado de vendedores</h2>
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <h2 className="center">Listado de vendedores</h2>
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                            <div className="container-fluid">
+                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
  
                                     { /*Component Button react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowAdd }>
-                                        <i class="fas fa-plus"></i>
+                                        <i className="fas fa-plus"></i>
                                     </Button>
  
                                 </ul>
-                                <form class="d-flex">
+                                <form className="d-flex">
                                     <input
-                                        class="form-control me-2"
+                                        className="form-control me-2"
                                         type="search"
                                         placeholder="Ej: Leonardo Linero"
                                         aria-label="Search"
                                     />
-                                    <button class="btn btn-outline-success" type="submit">
-                                        <i class="fas fa-search"></i>
+                                    <button className="btn btn-outline-success" type="submit">
+                                        <i className="fas fa-search"></i>
                                     </button>
                                 </form>
                                 </div>
                             </div>
                         </nav>
-                        <table class="table">
-                            <thead class="table-dark">
+                        <table className="table">
+                            <thead className="table-dark">
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nombres</th>
@@ -212,12 +212,12 @@ const Vendedores = () => {
                                 <td>Joyería</td>
                                 <td>3193203455</td>
                                 <td>2021-09-01</td>
-                                <td class="icons">
+                                <td className="icons">
  
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -226,7 +226,7 @@ const Vendedores = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -239,12 +239,12 @@ const Vendedores = () => {
                                 <td>Moda</td>
                                 <td>3114301232</td>
                                 <td>2021-09-01</td>
-                                <td class="icons">
+                                <td className="icons">
  
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -253,7 +253,7 @@ const Vendedores = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -267,12 +267,12 @@ const Vendedores = () => {
                                 <td>Bisutería</td>
                                 <td>3119024563</td>
                                 <td>2021-04-03</td>
-                                <td class="icons">
+                                <td className="icons">
  
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -281,7 +281,7 @@ const Vendedores = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -295,12 +295,12 @@ const Vendedores = () => {
                                 <td>Muebles hogar</td>
                                 <td>3002115211</td>
                                 <td>2021-03-23</td>
-                                <td class="icons">
+                                <td className="icons">
  
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -309,7 +309,7 @@ const Vendedores = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -323,12 +323,12 @@ const Vendedores = () => {
                                 <td>Moda</td>
                                 <td>3157126113</td>
                                 <td>2021-02-11</td>
-                                <td class="icons">
+                                <td className="icons">
  
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -337,7 +337,7 @@ const Vendedores = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -348,12 +348,12 @@ const Vendedores = () => {
                         </tbody>
                         </table>
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item disabled"><Link to={ "" } class="page-link">Anterior</Link></li>
-                                <li class="page-item"><Link to={ "" } class="page-link" href="#">1</Link></li>
-                                <li class="page-item"><Link to={ "" } class="page-link" href="#">2</Link></li>
-                                <li class="page-item"><Link to={ "" } class="page-link" href="#">3</Link></li>
-                                <li class="page-item"><Link to={ "" } class="page-link" href="#">Siguiente</Link></li>
+                            <ul className="pagination justify-content-end">
+                                <li className="page-item disabled"><Link to={ "" } className="page-link">Anterior</Link></li>
+                                <li className="page-item"><Link to={ "" } className="page-link" href="#">1</Link></li>
+                                <li className="page-item"><Link to={ "" } className="page-link" href="#">2</Link></li>
+                                <li className="page-item"><Link to={ "" } className="page-link" href="#">3</Link></li>
+                                <li className="page-item"><Link to={ "" } className="page-link" href="#">Siguiente</Link></li>
                             </ul>
                         </nav>
  

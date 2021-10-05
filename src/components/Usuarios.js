@@ -45,12 +45,12 @@ const Usuarios = () => {
                             </Modal.Header>
                             <Modal.Body>
 
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
                                 </div>
-                                <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <div className="form-floating">
+                                    <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
                                         <option selected>Seleccione...</option>
                                         <option value="1">Administrador</option>
                                         <option value="2">Vendedor</option>
@@ -81,12 +81,12 @@ const Usuarios = () => {
                             </Modal.Header>
                             <Modal.Body>
 
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
+                                <div className="mb-3">
+                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
                                 </div>
-                                <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <div className="form-floating">
+                                    <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
                                         <option selected>Seleccione...</option>
                                         <option value="1">Administrador</option>
                                         <option value="2">Vendedor</option>
@@ -127,34 +127,34 @@ const Usuarios = () => {
                             </Modal.Footer>
                         </Modal>    { /* End - Component Modal (Eliminar) react-bootstrap */ }
 
-                        <h2 class="center">Listado de usuarios</h2>
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <h2 className="center">Listado de usuarios</h2>
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                            <div className="container-fluid">
+                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                                     { /*Component Button react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowAdd }>
-                                        <i class="fas fa-plus"></i>
+                                        <i className="fas fa-plus"></i>
                                     </Button>
 
                                 </ul>
-                                <form class="d-flex">
+                                <form className="d-flex">
                                     <input
-                                        class="form-control me-2"
+                                        className="form-control me-2"
                                         type="search"
                                         placeholder="Ej: Leonardo Linero"
                                         aria-label="Search"
                                     />
-                                    <button class="btn btn-outline-success" type="submit">
-                                        <i class="fas fa-search"></i>
+                                    <button className="btn btn-outline-success" type="submit">
+                                        <i className="fas fa-search"></i>
                                     </button>
                                 </form>
                                 </div>
                             </div>
                         </nav>
-                        <table class="table">
-                            <thead class="table-dark">
+                        <table className="table">
+                            <thead className="table-dark">
                                 <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Nombres</th>
@@ -167,12 +167,12 @@ const Usuarios = () => {
                                 <td>1</td>
                                 <td>Ana Maria</td>
                                 <td>Vendedor</td>
-                                <td class="icons">
+                                <td className="icons">
 
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -181,7 +181,7 @@ const Usuarios = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -193,12 +193,12 @@ const Usuarios = () => {
                                 <td>2</td>
                                 <td>Luisa Bazalar</td>
                                 <td>Administrador</td>
-                                <td class="icons">
+                                <td className="icons">
 
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -207,7 +207,7 @@ const Usuarios = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -219,12 +219,12 @@ const Usuarios = () => {
                                 <td>3</td>
                                 <td>Manuela Gomez</td>
                                 <td>Comprador</td>
-                                <td class="icons">
+                                <td className="icons">
 
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -233,7 +233,7 @@ const Usuarios = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -245,12 +245,12 @@ const Usuarios = () => {
                                 <td>4</td>
                                 <td>Elisa Giraldo</td>
                                 <td>Comprador</td>
-                                <td class="icons">
+                                <td className="icons">
 
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -259,7 +259,7 @@ const Usuarios = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -271,12 +271,12 @@ const Usuarios = () => {
                                 <td>5</td>
                                 <td>Juliana Puerta</td>
                                 <td>Vendedor</td>
-                                <td class="icons">
+                                <td className="icons">
 
                                     { /*Component Button (Edit) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowEdit }>
                                         <i
-                                            class="fas fa-edit"
+                                            className="fas fa-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editModal"
                                         ></i>
@@ -285,7 +285,7 @@ const Usuarios = () => {
                                     { /*Component Button (Delete) react-bootstrap */ }
                                     <Button variant="primary" onClick={ handleShowDelete }>
                                         <i
-                                            class="fas fa-trash-alt"
+                                            className="fas fa-trash-alt"
                                             data-bs-toggle="modal"
                                             data-bs-target="#deleteModal"
                                         ></i>
@@ -296,12 +296,12 @@ const Usuarios = () => {
                         </tbody>
                         </table>
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item disabled"><Link class="page-link">Anterior</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">1</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">2</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">3</Link></li>
-                                <li class="page-item"><Link class="page-link" href="#">Siguiente</Link></li>
+                            <ul className="pagination justify-content-end">
+                                <li className="page-item disabled"><Link className="page-link">Anterior</Link></li>
+                                <li className="page-item"><Link className="page-link" href="#">1</Link></li>
+                                <li className="page-item"><Link className="page-link" href="#">2</Link></li>
+                                <li className="page-item"><Link className="page-link" href="#">3</Link></li>
+                                <li className="page-item"><Link className="page-link" href="#">Siguiente</Link></li>
                             </ul>
                         </nav>
 
