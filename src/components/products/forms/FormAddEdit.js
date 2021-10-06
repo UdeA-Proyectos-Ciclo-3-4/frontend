@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
+import { initialStateProducts } from '../../../data/products';
+
 // Functional Component
-const FormAddEdit = ({ product, setProduct, setStateModal }) => {
+const FormAddEdit = ({ type, product, setProduct, setStateModal, addNewProduct }) => {
 
     // State Component
     const [ formProduct, setFormProduct ] = useState( product );
@@ -24,7 +26,11 @@ const FormAddEdit = ({ product, setProduct, setStateModal }) => {
     const handleSubmit = event => {
         event.preventDefault();
         console.log( 'handleSubmit Add/Edit' )
-        //setProduct( formProduct );
+
+        if( type === 'add' ) {
+            addNewProduct( formProduct );
+            setProduct( initialStateProducts );
+        }
     }
 
     return (

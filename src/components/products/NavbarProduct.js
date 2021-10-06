@@ -3,18 +3,15 @@ import React, { useState } from 'react';
 import ModalAddEdit from '../modals/ModalAddEdit';
 import FormAddEdit from './forms/FormAddEdit';
 
+import { initialStateProducts } from '../../data/products';
+
 // Functional Component
-const NavbarProduct = ({ title }) => {
+const NavbarProduct = ({ title, addNewProduct }) => {
 
-    const [ stateModalAdd, setStateModalAdd ] = useState( false );
-
-    const [ product, setProduct ] = useState({
-        _id: '',
-        descripcion: '',
-        valorUnitario: '',
-        estado: '',
-        fechaIngreso: ''
-    });
+    // State Component
+    const
+        [ stateModalAdd, setStateModalAdd ] = useState( false ),
+        [ product, setProduct ] = useState( initialStateProducts );
 
     return (
         <>
@@ -31,8 +28,11 @@ const NavbarProduct = ({ title }) => {
                                 setStateModal={ setStateModalAdd }
                                 component={
                                     <FormAddEdit
+                                        type={ "add" }
                                         product={ product }
+                                        setProduct={ setProduct }
                                         setStateModal={ setStateModalAdd }
+                                        addNewProduct={ addNewProduct }
                                     />
                                 }
                             />
