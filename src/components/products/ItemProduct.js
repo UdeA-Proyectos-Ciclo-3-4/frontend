@@ -21,7 +21,7 @@ const ItemProduct = ({ product, setProducts }) => {
             <td onClick={ handleShowProduct }>{ product[ 'fechaIngreso' ]}</td>
             <td className="icons">
 
-                <ModalAddEdit title={ "Editar Producto" } type={ "edit" } component={ <FormAddEdit /> } />
+                <ModalAddEdit title={ "Editar Producto" } type={ "edit" } component={ <FormAddEdit product={ product } /> } />
                 <ModalDelete title={ "Eliminar Producto" } component={ <FormDelete message={ "¿Desea eliminar producto?" } /> } />
 
             </td>

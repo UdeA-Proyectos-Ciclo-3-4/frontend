@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ModalAddEdit from '../modals/ModalAddEdit';
 import FormAddEdit from './forms/FormAddEdit';
 
 // Functional Component
 const NavbarProduct = ({ title }) => {
+
+    const [ product, setProduct ] = useState({
+        _id: null,
+        descripcion: '',
+        valorUnitario: null,
+        estado: '',
+        fechaIngreso: ''
+    });
+
     return (
         <>
             <h2 className="center">{ title }</h2>
@@ -13,7 +22,7 @@ const NavbarProduct = ({ title }) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
-                            <ModalAddEdit title={ "Agregar Producto" } type={ "add" } component={ <FormAddEdit /> } />
+                            <ModalAddEdit title={ "Agregar Producto" } type={ "add" } component={ <FormAddEdit product={ product } setProduct={ setProduct } /> } />
 
                         </ul>
                         <form className="d-flex">

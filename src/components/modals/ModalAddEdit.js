@@ -4,8 +4,7 @@ import { Modal, Button } from 'react-bootstrap';
 // Functional Component
 const ModalAddEdit = ({ title, type, component }) => {
 
-    console.log( title );
-
+    // State Component
     const [ showAdd, setShowAdd ] = useState(false);
 
     const handleCloseAdd = () => {
@@ -43,7 +42,7 @@ const ModalAddEdit = ({ title, type, component }) => {
             </Modal>
 
             <Button variant="primary" onClick={ handleShowAdd }>
-                { ( type === 'add' ) && <i class="fas fa-plus"></i> }
+                { ( type === 'add' ) && <i className="fas fa-plus"></i> }
                 { ( type === 'edit' ) && <i className="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i> }
             </Button>
         </>
