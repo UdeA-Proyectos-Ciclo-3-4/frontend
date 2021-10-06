@@ -1,7 +1,9 @@
 import React from 'react';
 
-import AddEditProduct from './EditProduct';
-import DeleteProduct from './DeleteProduct';
+import ModalAddEdit from '../modals/ModalAddEdit';
+import ModalDelete from '../modals/ModalDelete';
+import FormAddEdit from './forms/FormAddEdit';
+import FormDelete from './forms/FormDelete';
 
 // Functional Component
 const ItemProduct = ({ product, setProducts }) => {
@@ -19,8 +21,8 @@ const ItemProduct = ({ product, setProducts }) => {
             <td onClick={ handleShowProduct }>{ product[ 'fechaIngreso' ]}</td>
             <td className="icons">
 
-                <AddEditProduct />
-                <DeleteProduct />
+                <ModalAddEdit title={ "Editar Producto" } type={ "edit" } component={ <FormAddEdit /> } />
+                <ModalDelete title={ "Eliminar Producto" } component={ <FormDelete message={ "¿Desea eliminar producto?" } /> } />
 
             </td>
         </tr>

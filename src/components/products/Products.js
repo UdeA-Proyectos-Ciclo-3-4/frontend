@@ -26,7 +26,7 @@ const Products = () => {
                 </div>
                 <div className="col col-md-9">
 
-                    <NavbarProduct />
+                    <NavbarProduct title={ "Listado de productos" } />
                     <TableProducts products={ products } setProducts={ setProducts } />
 
                 </div>
