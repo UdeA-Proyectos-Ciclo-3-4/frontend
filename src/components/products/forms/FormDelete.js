@@ -4,25 +4,27 @@ import { Modal, Button } from 'react-bootstrap';
 // Functional Component
 const FormDelete = ({ message, setStateModal }) => {
 
-    const handleSave = () => {
-        console.log( 'handleSave Delete' );
-    }
-
     const handleCloseModal = () => {
         console.log( 'handleClose Modal' );
         setStateModal( false );
     }
 
+    const handleSubmit = event => {
+        event.preventDefault();
+        console.log( 'handleSubmit Delete' )
+        //setProduct( formProduct );
+    }
+
     return (
-        <>
+        <form onSubmit={ handleSubmit }>
             <p>{ message }</p>
             <Modal.Footer>
                 <Button variant="secondary" onClick={ handleCloseModal }>
                     Cerrar
                 </Button>
-                <Button variant="primary" onClick={ handleSave }>Guardar</Button>
+                <Button type="submit" variant="primary">Guardar</Button>
             </Modal.Footer>
-        </>
+        </form>
     )
 }
 

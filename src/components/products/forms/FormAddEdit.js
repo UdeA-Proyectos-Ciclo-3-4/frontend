@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
 // Functional Component
-const FormAddEdit = ({ product, setProduct }) => {
+const FormAddEdit = ({ product, setProduct, setStateModal }) => {
 
     // State Component
     const [ formProduct, setFormProduct ] = useState( product );
 
     const { descripcion, valorUnitario, estado } = formProduct;
+
+    const handleCloseModal = () => {
+        console.log( 'Click handleCloseModal' );
+        setStateModal( false );
+    }
 
     const handleChange = event => {
         setFormProduct({
@@ -17,7 +23,8 @@ const FormAddEdit = ({ product, setProduct }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        setProduct( formProduct );
+        console.log( 'handleSubmit Add/Edit' )
+        //setProduct( formProduct );
     }
 
     return (
@@ -77,6 +84,14 @@ const FormAddEdit = ({ product, setProduct }) => {
                     </label>
                 </div>
             </div>
+
+            <Modal.Footer>
+                <Button variant="secondary" onClick={ handleCloseModal }>
+                    Cerrar
+                </Button>
+                <Button type="submit" variant="primary">Guardar</Button>
+            </Modal.Footer>
+
         </form>
     )
 }

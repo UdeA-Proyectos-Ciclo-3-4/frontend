@@ -4,19 +4,19 @@ import { Modal, Button } from 'react-bootstrap';
 // Functional Component
 const ModalDelete = ({ title, component, stateModal, setStateModal }) => {
 
-    const handleCloseDelete = () => {
-        console.log( 'handleClose Modal' );
+    const handleCloseModal = () => {
+        console.log( 'Click handleCloseModal' );
         setStateModal( false );
     }
 
-    const handleShowDelete = () => {
-        console.log( 'handleClose Modal' );
+    const handleShowModal = () => {
+        console.log( 'Click handleShowModal' );
         setStateModal( true );
     }
 
     return (
         <>
-            <Button variant="primary" onClick={ handleShowDelete }>
+            <Button variant="primary" onClick={ handleShowModal }>
                 <i
                     className="fas fa-trash-alt"
                     data-bs-toggle="modal"
@@ -26,7 +26,7 @@ const ModalDelete = ({ title, component, stateModal, setStateModal }) => {
 
             <Modal
                 show={ stateModal }
-                onHide={ handleCloseDelete }
+                onHide={ handleCloseModal }
                 backdrop="static"
                 keyboard={ false }
             >

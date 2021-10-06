@@ -1,50 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 // Functional Component
-const ModalAddEdit = ({ title, type, component }) => {
+const ModalAddEdit = ({ title, type, component, stateModal, setStateModal }) => {
 
-    // State Component
-    const [ showAdd, setShowAdd ] = useState(false);
-
-    const handleCloseAdd = () => {
-        console.log( 'Click Close Add' );
-        setShowAdd(false);
+    const handleCloseModal = () => {
+        console.log( 'Click handleCloseModal' );
+        setStateModal( false );
     };
 
 
-    const handleShowAdd = () => {
-        console.log( 'Click Show Add' );
-        setShowAdd( true );
+    const handleShowModal = () => {
+        console.log( 'Click handleShowModal' );
+        setStateModal( true );
     }
 
     return (
         <>
+            <Button variant="primary" onClick={ handleShowModal }>
+                { ( type === 'add' ) && <i className="fas fa-plus"></i> }
+                { ( type === 'edit' ) && <i className="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i> }
+            </Button>
+
             <Modal
-                show={ showAdd }
-                onHide={ handleCloseAdd }
+                show={ stateModal }
+                onHide={ handleCloseModal }
                 backdrop="static"
                 keyboard={ false }
             >
                 <Modal.Header closeButton>
                     <Modal.Title>{ title }</Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body>
                     { component }
                 </Modal.Body>
 
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={ handleCloseAdd }>
-                        Cerrar
-                    </Button>
-                    <Button variant="primary">Guardar</Button>
-                </Modal.Footer>
             </Modal>
 
-            <Button variant="primary" onClick={ handleShowAdd }>
-                { ( type === 'add' ) && <i className="fas fa-plus"></i> }
-                { ( type === 'edit' ) && <i className="fas fa-edit" data-bs-toggle="modal" data-bs-target="#editModal"></i> }
-            </Button>
         </>
     )
 }

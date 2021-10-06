@@ -8,10 +8,13 @@ import FormDelete from './forms/FormDelete';
 // Functional Component
 const ItemProduct = ({ product, setProducts }) => {
 
-    const [ stateModalDelete, setStateModalDelete ] = useState( false );
+    // State Modal Components
+    const
+        [ stateModalDelete, setStateModalDelete ] = useState( false ),
+        [ stateModalEdit, setStateModalEdit ] = useState( false );
 
     const handleShowProduct = () => {
-        console.log( 'Click Show' );
+        console.log( 'Click handleShowProduct' );
     }
 
     return (
@@ -23,7 +26,19 @@ const ItemProduct = ({ product, setProducts }) => {
             <td onClick={ handleShowProduct }>{ product[ 'fechaIngreso' ]}</td>
             <td className="icons">
 
-                <ModalAddEdit title={ "Editar Producto" } type={ "edit" } component={ <FormAddEdit product={ product } /> } />
+                <ModalAddEdit
+                    title={ "Editar Producto" }
+                    type={ "edit" }
+                    stateModal={ stateModalEdit }
+                    setStateModal={ setStateModalEdit }
+                    component={
+                        <FormAddEdit
+                            product={ product }
+                            setStateModal={ setStateModalEdit }
+                        />
+                    }
+                />
+
                 <ModalDelete
                     title={ "Eliminar Producto" }
                     stateModal={ stateModalDelete }
