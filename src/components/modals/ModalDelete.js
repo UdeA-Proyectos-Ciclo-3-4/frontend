@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 // Functional Component
-const ModalDelete = ({ title, component }) => {
+const ModalDelete = ({ title, component, stateModal, setStateModal }) => {
 
-    const [ showDelete, setShowDelete ] = useState(false);
+    const handleCloseDelete = () => {
+        console.log( 'handleClose Modal' );
+        setStateModal( false );
+    }
 
-    const handleCloseDelete = () => setShowDelete(false);
-    const handleShowDelete = () => setShowDelete(true);
+    const handleShowDelete = () => {
+        console.log( 'handleClose Modal' );
+        setStateModal( true );
+    }
 
     return (
         <>
@@ -20,24 +25,20 @@ const ModalDelete = ({ title, component }) => {
             </Button>
 
             <Modal
-                show={ showDelete }
+                show={ stateModal }
                 onHide={ handleCloseDelete }
                 backdrop="static"
                 keyboard={ false }
             >
+
                 <Modal.Header closeButton>
                     <Modal.Title>{ title }</Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body>
                     { component }
                 </Modal.Body>
 
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={ handleCloseDelete }>
-                        Cerrar
-                    </Button>
-                    <Button variant="primary">Guardar</Button>
-                </Modal.Footer>
             </Modal>
         </>
     )
