@@ -1,8 +1,9 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import products from '../../../data/products';
 
 // Functional Component
-const FormDelete = ({ message, setStateModal }) => {
+const FormDelete = ({ message, setStateModal, product, deleteProduct }) => {
 
     const handleCloseModal = () => {
         console.log( 'handleClose Modal' );
@@ -11,8 +12,8 @@ const FormDelete = ({ message, setStateModal }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log( 'handleSubmit Delete' )
-        //setProduct( formProduct );
+        console.log( 'handleSubmit Delete', product );
+        deleteProduct( product );
     }
 
     return (

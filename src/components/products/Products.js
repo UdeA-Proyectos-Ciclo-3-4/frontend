@@ -23,6 +23,14 @@ const Products = () => {
         ]);
     }
 
+    const deleteProduct = ( productToBeEliminated ) => {
+        //console.log( 'deleteProduct', productToBeEliminated );
+
+        setProducts( products.filter( product => (
+            product[ '_id' ] !== productToBeEliminated[ '_id' ]
+        )));
+    }
+
     return (
         <div className="container mb-5 pb-5 mt-5 pt-5">
             <div className="row">
@@ -33,8 +41,15 @@ const Products = () => {
                 </div>
                 <div className="col col-md-9">
 
-                    <NavbarProduct title={ "Listado de productos" } addNewProduct={ addNewProduct } />
-                    <TableProducts products={ products } setProducts={ setProducts } />
+                    <NavbarProduct
+                        title={ "Listado de productos" }
+                        addNewProduct={ addNewProduct }
+                    />
+                    <TableProducts
+                        products={ products }
+                        setProducts={ setProducts }
+                        deleteProduct={ deleteProduct }
+                    />
 
                 </div>
             </div>

@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 import ItemProducto from './ItemProduct';
 
 // Functional Component
-const TableProducts = ({ products, setProducts }) => {
+const TableProducts = ({ products, setProducts, deleteProduct }) => {
 
     console.log( products );
 
@@ -29,6 +29,7 @@ const TableProducts = ({ products, setProducts }) => {
                                         key={ product._id }
                                         product={ product }
                                         setProducts={ setProducts }
+                                        deleteProduct={ deleteProduct }
                                     />
                                 ))}
                             </tbody>
