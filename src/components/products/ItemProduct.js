@@ -6,7 +6,7 @@ import FormAddEdit from './forms/FormAddEdit';
 import FormDelete from './forms/FormDelete';
 
 // Functional Component
-const ItemProduct = ({ product, setProducts, deleteProduct }) => {
+const ItemProduct = ({ product, setProducts, deleteProduct, updateProduct }) => {
 
     // State Modal Components
     const
@@ -33,8 +33,10 @@ const ItemProduct = ({ product, setProducts, deleteProduct }) => {
                     setStateModal={ setStateModalEdit }
                     component={
                         <FormAddEdit
+                            type={ "edit" }
                             product={ product }
                             setStateModal={ setStateModalEdit }
+                            updateProduct={ updateProduct }
                         />
                     }
                 />

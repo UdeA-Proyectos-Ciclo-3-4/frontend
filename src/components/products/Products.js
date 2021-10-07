@@ -23,6 +23,18 @@ const Products = () => {
         ]);
     }
 
+    const updateProduct = ( productToUpdate ) => {
+
+        const listaProductos = products.filter( product => (
+            product[ '_id' ] !== productToUpdate[ '_id' ]
+        ));
+
+        listaProductos.push( productToUpdate );
+
+        setProducts( listaProductos );
+
+    }
+
     const deleteProduct = ( productToBeEliminated ) => {
         //console.log( 'deleteProduct', productToBeEliminated );
 
@@ -49,6 +61,7 @@ const Products = () => {
                         products={ products }
                         setProducts={ setProducts }
                         deleteProduct={ deleteProduct }
+                        updateProduct={ updateProduct }
                     />
 
                 </div>

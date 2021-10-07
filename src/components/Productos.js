@@ -19,7 +19,6 @@ const Productos = () => {
 
     const handleCloseDelete = () => setShowDelete(false);
     const handleShowDelete = () => setShowDelete(true);
-  
 
     return (
         <div className="container mb-5 pb-5 mt-5 pt-5">
