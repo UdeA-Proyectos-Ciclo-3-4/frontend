@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+footer{
+  text-align: center;
+}
+
+
+/* Icons */
+.fa, .fas , .fab{
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+
+button.btn.btn-primary {
+  background: rgb( 248, 249, 250 );
+  color: black;
+  border: none;
+  padding: 0;
+}
+
+td.icons {
+  text-align: right;
+}
+
+.list-group-item a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.list-group-item a:hover{
+  text-decoration: none;
+  color: #666666;
+  
+}
+
+.btn-login, .btn-register, .logo{
+  margin: 0 0.5rem;
+
+}
