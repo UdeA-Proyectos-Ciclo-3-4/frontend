@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import ModalAddEdit from '../modals/ModalAddEdit';
-// import ModalDelete from '../modals/ModalDelete';
+import ModalDelete from '../modals/ModalDelete';
 import FormAddEdit from './formularios/FormAddEdit';
-// import FormDelete from './forms/FormDelete';
+import FormDelete from './formularios/FormDelete';
 
 // Functional Component
 const ItemUsuario = ({ usuario, setUsuarios, deleteUsuario, updateUsuario }) => {
 
     // State Modal Components
     const
-    //    [ stateModalDelete, setStateModalDelete ] = useState( false ),
+        [ stateModalDelete, setStateModalDelete ] = useState( false ),
         [ stateModalEdit, setStateModalEdit ] = useState( false );
 
     const handleMostrarUsuario = () => {
@@ -37,9 +37,21 @@ const ItemUsuario = ({ usuario, setUsuarios, deleteUsuario, updateUsuario }) => 
                             setStateModal={ setStateModalEdit }
                             updateUsuario={ updateUsuario }
                         />
+
                     }
                 />
-
+                <ModalDelete
+                    title={ "Eliminar Usuario" }
+                    stateModal={ stateModalDelete }
+                    setStateModal={ setStateModalDelete }
+                    component={
+                        <FormDelete
+                            usuario={ usuario }
+                            message={ "¿Desea eliminar usuario?" }
+                            setStateModal={ setStateModalDelete }
+                            deleteUsuario={ deleteUsuario }
+                        /> }
+                />
                 
             </td>
         </tr>
