@@ -26,7 +26,7 @@ const ItemUsuario = ({ usuario, setUsuarios, deleteUsuario, updateUsuario }) => 
             
             <td className="icons">
                 <ModalAddEdit
-                    title={ "Editar Producto" }
+                    title={ "Editar Usuario" }
                     type={ "edit" }
                     stateModal={ stateModalEdit }
                     setStateModal={ setStateModalEdit }

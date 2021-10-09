@@ -37,7 +37,7 @@ const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario }) => {
     return (
         <form onSubmit={ handleSubmit }>
             <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">nombre</label>
+                <label htmlFor="exampleFormControlInput1" className="form-label">Nombre</label>
                 <input
                     type="text"
                     className="form-control"
@@ -49,40 +49,37 @@ const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario }) => {
                 />
             </div>
             <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">rol</label>
+                <label htmlFor="exampleFormControlInput1" className="form-label">Rol</label>
                 <Form.Select aria-label="Default select example">
-                    <option>Open this select menu</option>
+                    <option>Seleccione...</option>
                     <option value="1">administrador</option>
                     <option value="2">vendedor</option>
                     <option value="3">comprador</option>
                 </Form.Select>
             </div>
             <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">correo</label>
-                <div className="form-check">
-                    <input
-                        className="form-check-input"
-                        type="email"
-                        name="correo"
-                        id="flexRadioDefault1"
-                        value={correo}
-                        onChange={ handleChange }
-                        
-                    />
-                    
-                </div>
-                <div className="form-check">
-                    <input
-                        className="form-check-input"
-                        type="password"
-                        name="contrasena"
-                        id="flexRadioDefault2"
-                        value={contrasena}
-                        onChange={ handleChange }
-                        
-                    />
-                   
-                </div>
+                <label htmlFor="exampleFormControlInput1" className="form-label">Correo</label>
+                <input
+                    type="email"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Ej: miguel@correo.co"
+                    name="correo"
+                    value={ correo }
+                    onChange={ handleChange }
+                />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="exampleFormControlInput1" className="form-label">Contraseña</label>
+                <input
+                    type="password"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="*****"
+                    name="contrasena"
+                    value={ contrasena }
+                    onChange={ handleChange }
+                />
             </div>
 
             <Modal.Footer>
