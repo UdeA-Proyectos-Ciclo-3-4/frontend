@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Components
 import Menu from '../Menu';
 import TableUsuarios from './TableUsuarios';
-// import NavbarProduct from './NavbarProduct';
+import NavbarUsuario from './NavbarUsuario';
 
 // Static Data
 import initialState from '../../data/usuarios';
@@ -12,13 +12,13 @@ import initialState from '../../data/usuarios';
 const Usuario = () => {
 
     // State Component
-    const [ usuarios, setUsuarios ] = useState( initialState );
+    const [ usuarios, setUsuarios ] = useState( initialState );   // Destructuring
 
     const addNewUsuario = ( newUsuario ) => {
         //console.log( addNewProduct, newProduct );
 
         setUsuarios([
-            ...usuarios,
+            ...usuarios,            // Spread
             newUsuario
         ]);
     }
@@ -53,10 +53,10 @@ const Usuario = () => {
                 </div>
                 <div className="col col-md-9">
 
-                    {/* <NavbarUsuario
+                     <NavbarUsuario
                         title={ "Listado de usuarios" }
                         addNewUsuario={ addNewUsuario }
-                    /> */}
+                    /> 
                     <TableUsuarios
                         usuarios={ usuarios }
                         setUsuarios={ setUsuarios }

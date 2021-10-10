@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 // Functional Component
-const ModalAddEdit = ({ title, type, component, stateModal, setStateModal }) => {
+const ModalAddEdit = ({ type, component, stateModal, setStateModal, title }) => {
 
     const handleCloseModal = () => {
         console.log( 'Click handleCloseModal' );
