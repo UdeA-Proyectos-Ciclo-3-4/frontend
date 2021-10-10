@@ -4,7 +4,7 @@ import { Modal, Button , Form} from 'react-bootstrap';
 import { initialStateUsuarios } from '../../../data/usuarios';
 
 // Functional Component
-const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario }) => {
+const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario, addNewUsuario }) => {
 
     // State Component
     const [ formUsuario, setFormUsuario ] = useState( usuario );
@@ -30,6 +30,10 @@ const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario }) => {
         
         if( type === 'edit' ) {
             updateUsuario( formUsuario );
+            
+        }
+        if( type === 'add' ) {
+            addNewUsuario( formUsuario );
             
         }
     }
