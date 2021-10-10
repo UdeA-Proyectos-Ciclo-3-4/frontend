@@ -50,11 +50,11 @@ const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario }) => {
             </div>
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Rol</label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select name = "rol" as="select" onChange={handleChange} aria-label="Default select example">
                     <option>Seleccione...</option>
-                    <option value="1">administrador</option>
-                    <option value="2">vendedor</option>
-                    <option value="3">comprador</option>
+                    <option value="administrador">administrador</option>
+                    <option value="vendedor">vendedor</option>
+                    <option value="comprador">comprador</option>
                 </Form.Select>
             </div>
             <div className="mb-3">
