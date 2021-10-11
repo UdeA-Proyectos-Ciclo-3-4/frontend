@@ -5,6 +5,8 @@ import ModalDelete from '../modals/ModalDelete';
 import FormAddEdit from './forms/FormAddEdit';
 import FormDelete from './forms/FormDelete';
 
+import { convertDate } from '../../libs/convertDate';
+
 // Functional Component
 const ItemProduct = ({ product, setProducts, deleteProduct, updateProduct }) => {
 
@@ -19,11 +21,10 @@ const ItemProduct = ({ product, setProducts, deleteProduct, updateProduct }) => 
 
     return (
         <tr key={ product._id }>
-            <td onClick={ handleShowProduct }>{ product[ '_id' ] }</td>
             <td onClick={ handleShowProduct }>{ product[ 'descripcion' ] }</td>
             <td onClick={ handleShowProduct }>${ product[ 'valorUnitario' ]}</td>
             <td onClick={ handleShowProduct }>{ product[ 'estado' ] }</td>
-            <td onClick={ handleShowProduct }>{ product[ 'fechaIngreso' ]}</td>
+            <td onClick={ handleShowProduct }>{ convertDate( product[ 'fechaIngreso' ] ) }</td>
             <td className="icons">
 
                 <ModalAddEdit

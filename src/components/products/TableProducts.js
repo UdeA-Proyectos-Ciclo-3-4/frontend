@@ -15,7 +15,6 @@ const TableProducts = ({ products, setProducts, deleteProduct, updateProduct }) 
                     :   <Table className="table-product" bordered hover size="sm">
                             <thead className="table-dark">
                                 <tr>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Descripción</th>
                                     <th scope="col">Valor unitario</th>
                                     <th scope="col">Estado</th>
