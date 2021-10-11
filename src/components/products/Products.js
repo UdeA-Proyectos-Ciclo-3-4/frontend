@@ -17,19 +17,25 @@ const Products = () => {
     const
         [ products, setProducts ] = useState([]);
 
+    const getProductsfromAPI = async () => {
+        /** Consulta la data de productos a la API */
+        const response = await fetch( apiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        });
+
+        /** Obtiene la data */
+        let data  = await response.json();
+        console.log( data );
+
+        return data;
+    }
 
     useEffect( () => {
-        async function getProductsfromAPI() {
-            /** Consulta la data de productos a la API */
-            const response = await fetch( apiUrl, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                }
-            });
-
-            /** Obtiene la data */
-            let data  = await response.json();
+        const getAllProducts = async () => {
+            const data = await getProductsfromAPI();
             console.log( data );
 
             /** Verifica si se obtubieron los datos existosamente */
@@ -41,10 +47,9 @@ const Products = () => {
                 console.log(`Load static data`);
                 setProducts( initialStateProducts );    // Asigna la data por defecto (estatica) al State Component
             }
-
         }
 
-        getProductsfromAPI();
+        getAllProducts();
 
     }, [] );
 
