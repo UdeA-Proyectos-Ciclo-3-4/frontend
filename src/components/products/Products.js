@@ -52,6 +52,25 @@ const Products = () => {
         return data;
     }
 
+    // ! (1) Peticion a la API para actualizar un registro
+    const updateProductAPI = async ( productToUpdate ) => {
+        console.log( `URL: ${ apiUrl }/${ productToUpdate._id }` );
+        /** Consulta para actualizar data de productos en la API */
+        const response = await fetch( `${ apiUrl }/${ productToUpdate._id }`, {
+            method: 'PUT'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( productToUpdate )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
     useEffect( () => {
         const getAllProducts = async () => {
             const data = await getProductsfromAPI();        // ! (2) Invoca la Peticion para obtener la data
@@ -73,9 +92,8 @@ const Products = () => {
     }, [] );
 
     const addNewProduct = async ( newProduct ) => {
-        console.log( newProduct );
+    
         const data = await addProductAPI( newProduct );     // ! (2) Invoca la Peticion para obtener la data
-        console.log( data );
 
         setProducts([
             ...products,
@@ -83,13 +101,15 @@ const Products = () => {
         ]);
     }
 
-    const updateProduct = ( productToUpdate ) => {
+    const updateProduct = async ( productToUpdate ) => {
 
+        const data = await updateProductAPI( productToUpdate );     // ! (2) Invoca la Peticion para obtener la data
+        console.log( ' >>> ', data );
         const listaProductos = products.filter( product => (
             product[ '_id' ] !== productToUpdate[ '_id' ]
         ));
 
-        listaProductos.push( productToUpdate );
+        listaProductos.push( data.producto );
 
         setProducts( listaProductos );
     }
