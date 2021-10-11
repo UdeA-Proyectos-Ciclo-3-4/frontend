@@ -9,9 +9,7 @@ const products = [
 export default products;
 
 export const initialStateProducts = {
-    _id: '',
     descripcion: '',
     valorUnitario: '',
-    estado: '',
-    fechaIngreso: ''
+    estado: ''
 };

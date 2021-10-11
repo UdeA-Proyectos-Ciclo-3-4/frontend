@@ -17,6 +17,7 @@ const Products = () => {
     const
         [ products, setProducts ] = useState([]);
 
+    // ! (1) Peticion a la API para obtener todos los registros
     const getProductsfromAPI = async () => {
         /** Consulta la data de productos a la API */
         const response = await fetch( apiUrl, {
@@ -33,9 +34,27 @@ const Products = () => {
         return data;
     }
 
+    // ! (1) Peticion a la API para crear un nuevo registro
+    const addProductAPI = async ( newProduct ) => {
+        /** Consulta para registrar data de productos en la API */
+        const response = await fetch( apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( newProduct )
+        });
+
+        /** Obtiene la data */
+        let data  = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
     useEffect( () => {
         const getAllProducts = async () => {
-            const data = await getProductsfromAPI();
+            const data = await getProductsfromAPI();        // ! (2) Invoca la Peticion para obtener la data
             console.log( data );
 
             /** Verifica si se obtubieron los datos existosamente */
@@ -53,11 +72,14 @@ const Products = () => {
 
     }, [] );
 
-    const addNewProduct = ( newProduct ) => {
+    const addNewProduct = async ( newProduct ) => {
+        console.log( newProduct );
+        const data = await addProductAPI( newProduct );     // ! (2) Invoca la Peticion para obtener la data
+        console.log( data );
 
         setProducts([
             ...products,
-            newProduct
+            data.producto
         ]);
     }
 
@@ -70,7 +92,6 @@ const Products = () => {
         listaProductos.push( productToUpdate );
 
         setProducts( listaProductos );
-
     }
 
     const deleteProduct = ( productToBeEliminated ) => {
