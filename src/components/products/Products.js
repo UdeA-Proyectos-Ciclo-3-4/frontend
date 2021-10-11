@@ -71,10 +71,29 @@ const Products = () => {
         return data;
     }
 
+        // ! (1) Peticion a la API para actualizar un registro
+        const deleteProductAPI = async ( productToUpdate ) => {
+            console.log( `URL: ${ apiUrl }/${ productToUpdate._id }` );
+            /** Consulta para actualizar data de productos en la API */
+            const response = await fetch( `${ apiUrl }/${ productToUpdate._id }`, {
+                method: 'DELETE'                                                               ,
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify( productToUpdate )
+            });
+
+            /** Obtiene la data */
+            const data = await response.json();
+            console.log( data );
+
+            return data;
+        }
+
     useEffect( () => {
         const getAllProducts = async () => {
             const data = await getProductsfromAPI();        // ! (2) Invoca la Peticion para obtener la data
-            console.log( data );
+            console.log( 'GET', data );
 
             /** Verifica si se obtubieron los datos existosamente */
             if ( data.success ) {
@@ -92,8 +111,9 @@ const Products = () => {
     }, [] );
 
     const addNewProduct = async ( newProduct ) => {
-    
+
         const data = await addProductAPI( newProduct );     // ! (2) Invoca la Peticion para obtener la data
+        console.log( 'UPDATE', data );
 
         setProducts([
             ...products,
@@ -104,7 +124,8 @@ const Products = () => {
     const updateProduct = async ( productToUpdate ) => {
 
         const data = await updateProductAPI( productToUpdate );     // ! (2) Invoca la Peticion para obtener la data
-        console.log( ' >>> ', data );
+        console.log( 'UPDATE', data );
+
         const listaProductos = products.filter( product => (
             product[ '_id' ] !== productToUpdate[ '_id' ]
         ));
@@ -114,7 +135,10 @@ const Products = () => {
         setProducts( listaProductos );
     }
 
-    const deleteProduct = ( productToBeEliminated ) => {
+    const deleteProduct = async ( productToBeEliminated ) => {
+
+        const data = await deleteProductAPI( productToBeEliminated );
+        console.log( 'DELETE', data );
 
         setProducts( products.filter( product => (
             product[ '_id' ] !== productToBeEliminated[ '_id' ]

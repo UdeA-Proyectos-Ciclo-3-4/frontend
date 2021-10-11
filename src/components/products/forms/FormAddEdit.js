@@ -29,12 +29,14 @@ const FormAddEdit = ({ type, product, setProduct, setStateModal, addNewProduct, 
 
         if( type === 'add' ) {
             addNewProduct( formProduct );
-            setProduct( initialStateProducts );
+            setFormProduct( initialStateProducts );
         }
         if( type === 'edit' ) {
             updateProduct( formProduct );
-            //setProduct( initialStateProducts );
+            setFormProduct( initialStateProducts );
         }
+
+        setStateModal( false );
     }
 
     return (
