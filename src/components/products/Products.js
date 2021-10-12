@@ -130,7 +130,7 @@ const Products = () => {
             product[ '_id' ] !== productToUpdate[ '_id' ]
         ));
 
-        listaProductos.push( data.producto );
+        listaProductos.unshift( data.producto );
 
         setProducts( listaProductos );
     }

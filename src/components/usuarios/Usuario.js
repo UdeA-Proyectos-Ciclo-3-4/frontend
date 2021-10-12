@@ -126,7 +126,7 @@ const Usuario = () => {
             usuario[ '_id' ] !== usuarioToUpdate[ '_id' ]
         ));
 
-        listaUsuarios.push(data.usuario)
+        listaUsuarios.unshift(data.usuario)
 
         setUsuarios( listaUsuarios );
 
