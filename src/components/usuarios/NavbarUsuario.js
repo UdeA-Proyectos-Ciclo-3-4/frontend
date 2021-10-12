@@ -42,7 +42,7 @@ const NavbarUsuario = ({ title, addNewUsuario }) => {
                             <input
                                 className="form-control me-2"
                                 type="search"
-                                placeholder="Ej: Tennis para niña"
+                                placeholder="Ej: Pedro"
                                 aria-label="Search"
                             />
                             <button className="btn btn-outline-success" type="submit">

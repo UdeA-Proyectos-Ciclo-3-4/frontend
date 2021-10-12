@@ -10,7 +10,6 @@ const usuarios = [
 export default usuarios;
 
 export const initialStateUsuarios = {
-    _id: '',
     nombre: '',
     rol: '',
     correo: '',

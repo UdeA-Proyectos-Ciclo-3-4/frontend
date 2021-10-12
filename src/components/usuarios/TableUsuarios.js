@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-import ItemProducto from './ItemUsuario';
+import ItemUsuario from './ItemUsuario';
 
 // Functional Component
 const TableUsuarios = ({ usuarios, setUsuarios, deleteUsuario, updateUsuario }) => {
@@ -10,27 +10,26 @@ const TableUsuarios = ({ usuarios, setUsuarios, deleteUsuario, updateUsuario }) 
 
     return (
         <div>
-            {   usuarios.length <= 0
+            {   usuarios.length <=0
                     ?   <p>No hay usuarios</p>
-                    :   <Table className="table-product" bordered hover size="sm">
+                    :   <Table className="table-usuarios" bordered hover size="sm">
                             <thead className="table-dark">
                                 <tr>
-                                    <th scope="col">ID</th>
                                     <th scope="col">nombre</th>
                                     <th scope="col">rol</th>
                                     <th scope="col">correo</th>
-                                    
                                     <th scope="col">&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {   usuarios.map( usuario => (
-                                    <ItemProducto
+                                   
+                                    <ItemUsuario 
                                         key={ usuario._id }
-                                        usuario={ usuario }
-                                        setUsuarios={ setUsuarios }
-                                        deleteUsuario={ deleteUsuario }
-                                        updateUsuario={ updateUsuario }
+                                        usuario = { usuario }
+                                        setUsuarios = { setUsuarios }
+                                        deleteUsuario = { deleteUsuario }
+                                        updateUsuario = { updateUsuario } 
                                     />
                                 ))}
                             </tbody>
