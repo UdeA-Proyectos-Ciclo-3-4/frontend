@@ -51,6 +51,42 @@ const Usuario = () => {
         return data;
     }
 
+    const updateUsuarioAPI = async ( usuarioToUpdate ) => {
+        /** Consulta para actualizar data de usuarios en la API */
+        const response = await fetch( `${ apiUrl }/${ usuarioToUpdate._id }`, {
+            method: 'PUT'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( usuarioToUpdate )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
+    // ! (1) Peticion a la API para actualizar un registro
+    const deleteUsuarioAPI = async ( usuarioToUpdate ) => {
+        /** Consulta para actualizar data de usuarios en la API */
+        const response = await fetch( `${ apiUrl }/${ usuarioToUpdate._id }`, {
+            method: 'DELETE'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( usuarioToUpdate )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
+
     useEffect(() => {
         const getAllProducts = async () => {
             const data = await getUsuariosfromAPI();
@@ -82,20 +118,23 @@ const Usuario = () => {
         ]);
     }
 
-    const updateUsuario = ( usuarioToUpdate ) => {
+    const updateUsuario = async ( usuarioToUpdate ) => {
 
-        const listaUsuarios = usuarios.filter( usuario => (
+        const data = await updateUsuarioAPI( usuarioToUpdate );
+
+        const listaUsuarios = usuarios.filter(usuario =>(
             usuario[ '_id' ] !== usuarioToUpdate[ '_id' ]
         ));
 
-        listaUsuarios.push( usuarioToUpdate );
+        listaUsuarios.push(data.usuario)
 
         setUsuarios( listaUsuarios );
 
     }
 
-    const deleteUsuario = ( usuarioToBeEliminated ) => {
-        //console.log( 'deleteProduct', usuarioToBeEliminated );
+    const deleteUsuario = async( usuarioToBeEliminated ) => {
+        
+        const data = await deleteUsuarioAPI( usuarioToBeEliminated );
 
         setUsuarios( usuarios.filter( usuario => (
             usuario[ '_id' ] !== usuarioToBeEliminated[ '_id' ]
