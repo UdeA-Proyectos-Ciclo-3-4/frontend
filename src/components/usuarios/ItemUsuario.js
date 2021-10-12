@@ -7,7 +7,6 @@ import FormDelete from './formularios/FormDelete';
 
 // Functional Component
 const ItemUsuario = ({ usuario, setUsuarios, deleteUsuario, updateUsuario }) => {
-
     // State Modal Components
     const
         [ stateModalDelete, setStateModalDelete ] = useState( false ),
@@ -18,13 +17,12 @@ const ItemUsuario = ({ usuario, setUsuarios, deleteUsuario, updateUsuario }) => 
     }
 
     return (
-        <tr >
-            <td onClick={ handleMostrarUsuario }>{ usuario[ '_id' ] }</td>
+        <tr key={ usuario._id }>
             <td onClick={ handleMostrarUsuario }>{ usuario[ 'nombre' ] }</td>
             <td onClick={ handleMostrarUsuario }>{ usuario[ 'rol' ]}</td>
             <td onClick={ handleMostrarUsuario }>{ usuario[ 'correo' ] }</td>
-            
             <td className="icons">
+
                 <ModalAddEdit
                     title={ "Editar Usuario" }
                     type={ "edit" }
