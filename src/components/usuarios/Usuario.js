@@ -113,8 +113,8 @@ const Usuario = () => {
         console.log('actulizo', data);
 
         setUsuarios([
-            ...usuarios,            // Spread
-            data.nuevoUsuario
+            data.nuevoUsuario,
+            ...usuarios            // Spread
         ]);
     }
 

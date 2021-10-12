@@ -8,7 +8,7 @@ import NavbarProduct from './NavbarProduct';
 // Static Data
 import initialState, { initialStateProducts } from '../../data/products';
 
-const apiUrl = "http://localhost:5003/api/productos";
+const apiUrl = "http://localhost:5000/api/productos";
 
 // Functional Component
 const Products = () => {
@@ -116,8 +116,8 @@ const Products = () => {
         console.log( 'UPDATE', data );
 
         setProducts([
-            ...products,
-            data.producto
+            data.producto,
+            ...products
         ]);
     }
 
