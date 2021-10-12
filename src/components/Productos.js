@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Modal, Link, Button } from 'react-router-dom';
 
 import Menu from './Menu';
 
@@ -20,7 +19,6 @@ const Productos = () => {
 
     const handleCloseDelete = () => setShowDelete(false);
     const handleShowDelete = () => setShowDelete(true);
-
 
     return (
         <div className="container mb-5 pb-5 mt-5 pt-5">
@@ -44,7 +42,7 @@ const Productos = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Description</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Description</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -53,7 +51,7 @@ const Productos = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Valor unitario</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Valor unitario</label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -62,7 +60,7 @@ const Productos = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Estado</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Estado</label>
                                 <div className="form-check">
                                     <input
                                         className="form-check-input"
@@ -70,7 +68,7 @@ const Productos = () => {
                                         name="flexRadioDefault"
                                         id="flexRadioDefault1"
                                     />
-                                    <label className="form-check-label" for="flexRadioDefault1">
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
                                         Disponible
                                     </label>
                                 </div>
@@ -82,7 +80,7 @@ const Productos = () => {
                                         id="flexRadioDefault2"
                                         checked
                                     />
-                                    <label className="form-check-label" for="flexRadioDefault2">
+                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
                                         No Disponible
                                     </label>
                                 </div>
@@ -109,7 +107,7 @@ const Productos = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Description</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Description</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -118,7 +116,7 @@ const Productos = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Valor unitario</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Valor unitario</label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -127,7 +125,7 @@ const Productos = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Estado</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Estado</label>
                                 <div className="form-check">
                                     <input
                                         className="form-check-input"
@@ -135,7 +133,7 @@ const Productos = () => {
                                         name="flexRadioDefault"
                                         id="flexRadioDefault1"
                                     />
-                                    <label className="form-check-label" for="flexRadioDefault1">
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
                                         Disponible
                                     </label>
                                 </div>
@@ -147,7 +145,7 @@ const Productos = () => {
                                         id="flexRadioDefault2"
                                         checked
                                     />
-                                    <label className="form-check-label" for="flexRadioDefault2">
+                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
                                         No Disponible
                                     </label>
                                 </div>
@@ -373,7 +371,6 @@ const Productos = () => {
                             <li className="page-item"><Link to={ "" } className="page-link" href="#">Siguiente</Link></li>
                         </ul>
                     </nav>
-
 
                 </div>
             </div>
