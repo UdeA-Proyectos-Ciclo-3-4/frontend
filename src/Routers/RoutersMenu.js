@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
@@ -13,6 +12,7 @@ import Ventas from "../components/Ventas";
 const RoutersMenu = () => {
     return (
         <div>
+
             <div className="row">
                 <div className="col-10" id="panelCtrl">
 
