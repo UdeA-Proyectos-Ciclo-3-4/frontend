@@ -23,7 +23,7 @@ const Venta = () => {
         ]);
     }
 
-    const updateVenta = ( VentaToUpdate ) => {
+    const updateVentas = ( VentasToUpdate ) => {
 
         const listaVentas = ventas.filter( Ventas => (
             Ventas[ '_id' ] !== VentasToUpdate[ '_id' ]
@@ -55,7 +55,7 @@ const Venta = () => {
 
                     <NavbarVentas
                         title={ "Listado de ventas" }
-                        addNewVentas={ addNewVentas }
+                        addNewVentas={ addNewVenta }
                     />
                     <TablaVentas
                         Ventas={ ventas }
@@ -70,7 +70,7 @@ const Venta = () => {
     )
 };
 
-export default Ventas;
+export default Venta;
 © 2021 GitHub, Inc.
 Terms
 Privacy
