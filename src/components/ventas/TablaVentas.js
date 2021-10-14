@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 import ItemVentas from './ItemVentas';
 
 // Functional Component
-const TablaVentas = ({ ventas, setVentas, deleteVentas, updateVentas }) => {
+const TablaVentas = ({ ventas, setVentas, deleteVenta, updateVenta }) => {
 
     console.log( ventas );
 
@@ -28,13 +28,13 @@ const TablaVentas = ({ ventas, setVentas, deleteVentas, updateVentas }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {   ventas.map( ventas => (
+                                {   ventas.map( venta => (
                                     <ItemVentas
-                                        key={ ventas._id }
-                                        ventas={ ventas }
+                                        key={ venta._id }
+                                        venta={ venta }
                                         setVentas={ setVentas }
-                                        deleteVentas={ deleteVentas }
-                                        updateVentas={ updateVentas }
+                                        deleteVenta={ deleteVenta }
+                                        updateVenta={ updateVenta }
                                     />
                                 ))}
                             </tbody>

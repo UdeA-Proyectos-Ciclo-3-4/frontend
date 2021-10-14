@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 import ModalAddEdit from '../modals/ModalAddEdit';
 import ModalDelete from '../modals/ModalDelete.js';
-import FormAddEdit from './formularios/FormAddEdit';
-import FormDelete from './formularios/FormDelete';
+import FormAddEdit from './forms/FormAddEdit';
+import FormDelete from './forms/FormDelete';
 
 // Functional Component
-const ItemVentas = ({ ventas, setVentas, deleteVenta, updateVenta }) => {
-
+const ItemVentas = ({ venta, setVentas, deleteVenta, updateVenta }) => {
+// console.log(venta)
     // State Modal Components
     const
         [ stateModalDelete, setStateModalDelete ] = useState( false ),
@@ -18,16 +18,16 @@ const ItemVentas = ({ ventas, setVentas, deleteVenta, updateVenta }) => {
     }
 
     return (
-        <tr key={ ventas._id }>
-            <td onClick={ handleShowVenta }>{ ventas[ '_id' ] }</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'N_Factura' ] }</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'cliente' ]}</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'Descripcion' ] }</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'Total' ]}</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'FechaInicial' ]}</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'FechaPago' ]}</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'Responsable' ]}</td>
-            <td onClick={ handleShowVenta }>{ ventas[ 'Estado' ]}</td>
+        <tr key={ venta._id }>
+            <td onClick={ handleShowVenta }>{ venta[ '_id' ] }</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'N_Factura' ] }</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'cliente' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'Descripcion' ] }</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'Total' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'FechaInicial' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'FechaPago' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'Responsable' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'Estado' ]}</td>
             <td className="icons">
 
                 <ModalAddEdit
@@ -38,7 +38,7 @@ const ItemVentas = ({ ventas, setVentas, deleteVenta, updateVenta }) => {
                     component={
                         <FormAddEdit
                             type={ "edit" }
-                            Venta={ ventas }
+                            venta={ venta }
                             setStateModal={ setStateModalEdit }
                             updateVenta={ updateVenta }
                         />
@@ -51,10 +51,10 @@ const ItemVentas = ({ ventas, setVentas, deleteVenta, updateVenta }) => {
                     setStateModal={ setStateModalDelete }
                     component={
                         <FormDelete
-                            ventas={ ventas }
+                            venta={ venta }
                             message={ "¿Desea eliminar la venta?" }
                             setStateModal={ setStateModalDelete }
-                            deleteVendedor={ deleteVenta }
+                            deleteVenta={ deleteVenta }
                         /> }
                 />
 

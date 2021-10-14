@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Modal, Button , Form} from 'react-bootstrap';
 
-//import { initialStateVentas } from '../../../data/ventas';
+import { initialStateVentas } from '../../../data/ventas';
 
 // Functional Component
-const FormAddEdit = ({ type, Venta, setStateModal, updateVenta, addNewVenta }) => {
-
+const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =>{
+console.log(venta)
     // State Component
-    const [ formVenta, setFormVenta ] = useState( Venta );
-
+    const [ formVenta, setFormVenta ] = useState( venta );
+    console.log(formVenta)
     const { N_Factura, cliente, Descripcion, Total, FechaInicial, FechaPago, Responsable, Estado } = formVenta;
-
+// TO DO : VERIFICAR FORMULARIO PARA AGREGAR REGISTRO
     const handleCloseModal = () => {
         console.log( 'Click handleCloseModal' );
         setStateModal( false );
@@ -30,12 +30,13 @@ const FormAddEdit = ({ type, Venta, setStateModal, updateVenta, addNewVenta }) =
         
         if( type === 'edit' ) {
             updateVenta( formVenta );
-            
+            setFormVenta(initialStateVentas)
         }
         if( type === 'add' ) {
             addNewVenta( formVenta );
-            
+            setFormVenta(initialStateVentas)
         }
+        setStateModal( false )
     }
 
     return (

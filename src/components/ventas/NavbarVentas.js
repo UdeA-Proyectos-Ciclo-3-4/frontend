@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import ModalAddEdit from '../modals/ModalAddEdit';
-import FormAddEdit from './formularios/FormAddEdit';
+import FormAddEdit from './forms/FormAddEdit';
 
 import { initialStateVentas } from '../../data/ventas';
 
@@ -29,10 +29,10 @@ const NavbarVentas = ({ title, addNewVentas }) => {
                                 component={
                                     <FormAddEdit
                                         type={ "add" }
-                                        vendedor={ ventas }
-                                        setVendedor={ setVentas }
+                                        ventas={ ventas }
+                                        setVentas={ setVentas }
                                         setStateModal={ setStateModalAdd }
-                                        addNewVendedor={ addNewVentas }
+                                        addNewVentas={ addNewVentas }
                                     />
                                 }
                             />

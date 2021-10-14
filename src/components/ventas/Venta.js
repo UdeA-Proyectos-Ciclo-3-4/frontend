@@ -7,13 +7,13 @@ import NavbarVentas from './NavbarVentas';
 
 // Static Data
 import initialState from '../../data/ventas';
-
+console.log(initialState)
 // Functional Component
 const Venta = () => {
 
     // State Component
     const [ ventas, setVentas ] = useState( initialState );
-
+    console.log( ventas )
     const addNewVenta = ( newVenta ) => {
         //console.log( addNewVenta, newVenta );
 
@@ -23,10 +23,10 @@ const Venta = () => {
         ]);
     }
 
-    const updateVentas = ( VentasToUpdate ) => {
+    const updateVenta = ( VentasToUpdate ) => {
 
-        const listaVentas = ventas.filter( Ventas => (
-            Ventas[ '_id' ] !== VentasToUpdate[ '_id' ]
+        const listaVentas = ventas.filter( ventas => (
+            ventas[ '_id' ] !== VentasToUpdate[ '_id' ]
         ));
 
         listaVentas.push( VentasToUpdate );
@@ -35,7 +35,7 @@ const Venta = () => {
 
     }
 
-    const deleteVentas = ( VentasToBeEliminated ) => {
+    const deleteVenta = ( VentasToBeEliminated ) => {
         //console.log( 'deleteVentas', VentasToBeEliminated );
 
         setVentas( ventas.filter( Ventas => (
@@ -58,10 +58,10 @@ const Venta = () => {
                         addNewVentas={ addNewVenta }
                     />
                     <TablaVentas
-                        Ventas={ ventas }
+                        ventas={ ventas }
                         setVentas={ setVentas }
-                        deleteVentas={ deleteVentas }
-                        updateVentas={ updateVentas }
+                        deleteVenta={ deleteVenta }
+                        updateVenta={ updateVenta }
                     />
 
                 </div>
@@ -71,7 +71,3 @@ const Venta = () => {
 };
 
 export default Venta;
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Sec

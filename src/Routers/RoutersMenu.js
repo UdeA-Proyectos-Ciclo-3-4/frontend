@@ -6,7 +6,7 @@ import Login from "../components/Login";
 import Productos from '../components/products/Products';
 import Usuarios from "../components/usuarios/Usuario";
 import Vendedores from "../components/Vendedores";
-import Ventas from "../components/Ventas";
+import Ventas from "../components/ventas/Venta";
 
 // Functional Component
 const RoutersMenu = () => {
