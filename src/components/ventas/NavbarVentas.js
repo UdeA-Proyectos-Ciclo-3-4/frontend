@@ -11,7 +11,7 @@ const NavbarVentas = ({ title, addNewVentas }) => {
     // State Component
     const
         [ stateModalAdd, setStateModalAdd ] = useState( false ),
-        [ ventas, setVentas ] = useState( initialStateVentas );
+        [ venta, setVenta    ] = useState( initialStateVentas );
 
     return (
         <>
@@ -29,8 +29,8 @@ const NavbarVentas = ({ title, addNewVentas }) => {
                                 component={
                                     <FormAddEdit
                                         type={ "add" }
-                                        ventas={ ventas }
-                                        setVentas={ setVentas }
+                                        venta={ venta }
+                                        setVenta={ setVenta }
                                         setStateModal={ setStateModalAdd }
                                         addNewVentas={ addNewVentas }
                                     />
