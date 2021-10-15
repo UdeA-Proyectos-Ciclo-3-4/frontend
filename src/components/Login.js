@@ -1,8 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleLogin from 'react-google-login';
+
+
+const idClientGoogle = '367337669931-s6d728je9j4p0nkq11u8r53s2an0hdeo.apps.googleusercontent.com';
 
 // Functional Component
 const Login = () => {
+
+    const handleSuccessGoogle = response => {
+        console.log( 'Success: ', response );
+    }
+
+    const handleFailureGoogle = response => {
+        console.log( 'Failure: ', response );
+    }
+
     return (
         <div className="mt-5 container-fluid">
             <h3 className="row justify-content-center">Iniciar Sesión</h3>
@@ -35,6 +48,14 @@ const Login = () => {
                             ¿Olvidaste tu contraseña?
                         </p>
                     </Link>
+                    <hr />
+                    <GoogleLogin
+                        clientId={ idClientGoogle }
+                        buttonText="Login with Google"
+                        onSuccess={ handleSuccessGoogle }
+                        onFailure={ handleFailureGoogle }
+                        cookiePolicy={'single_host_origin'}
+                    />
                 </div>
             </div>
         </div>
