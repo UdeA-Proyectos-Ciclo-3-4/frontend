@@ -18,7 +18,7 @@ const Vendedores = () => {
 
     // ! (1) Peticion a la API para obtener todos los registros
     const getVendedoresfromAPI = async () => {
-        /** Consulta la data de productos a la API */
+        /** Consulta la data de vendedores a la API */
         const response = await fetch( apiUrl, {
             method: 'GET',
             headers: {
@@ -35,7 +35,7 @@ const Vendedores = () => {
 
     // ! (1) Peticion a la API para crear un nuevo registro
     const addVendedorAPI = async ( newVendedor ) => {
-        /** Consulta para registrar data de productos en la API */
+        /** Consulta para registrar data de vendedores en la API */
         const response = await fetch( apiUrl, {
             method: 'POST',
             headers: {
@@ -54,13 +54,32 @@ const Vendedores = () => {
     // ! (1) Peticion a la API para actualizar un registro
     const updateVendedorAPI = async ( vendedor ) => {
         console.log( `URL: ${ apiUrl }/${ vendedor._id }` );
-        /** Consulta para actualizar data de productos en la API */
+        /** Consulta para actualizar data de vendedores en la API */
         const response = await fetch( `${ apiUrl }/${ vendedor._id }`, {
             method: 'PUT'                                                               ,
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify( vendedor )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
+    // ! (1) Peticion a la API para actualizar un registro
+    const deleteVendedorAPI = async ( vendedorToUpdate ) => {
+        console.log( `URL: ${ apiUrl }/${ vendedorToUpdate._id }` );
+        /** Consulta para actualizar data de vendedores en la API */
+        const response = await fetch( `${ apiUrl }/${ vendedorToUpdate._id }`, {
+            method: 'DELETE'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( vendedorToUpdate )
         });
 
         /** Obtiene la data */
@@ -116,8 +135,9 @@ const Vendedores = () => {
 
     }
 
-    const deleteVendedor = ( vendedorToBeEliminated ) => {
-        //console.log( 'deleteVendedor', vendedorToBeEliminated );
+    const deleteVendedor = async ( vendedorToBeEliminated ) => {
+        const data = await deleteVendedorAPI( vendedorToBeEliminated );
+        console.log( 'DELETE', data );
 
         setVendedores( vendedores.filter( vendedor => (
             vendedor[ '_id' ] !== vendedorToBeEliminated[ '_id' ]
