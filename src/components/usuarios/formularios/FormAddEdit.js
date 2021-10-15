@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button , Form} from 'react-bootstrap';
 
-import { initialStateUsuarios } from '../../../data/usuarios';
-
 // Functional Component
 const FormAddEdit = ({ type, usuario, setStateModal, updateUsuario, addNewUsuario }) => {
 

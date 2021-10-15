@@ -1,6 +1,5 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import products from '../../../data/products';
 
 // Functional Component
 const FormDelete = ({ message, setStateModal, product, deleteProduct }) => {

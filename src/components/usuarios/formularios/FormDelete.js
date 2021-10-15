@@ -1,6 +1,5 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import usuarios from '../../../data/usuarios';
 
 // Functional Component
 const FormDelete = ({ message, setStateModal, usuario, deleteUsuario }) => {

@@ -134,7 +134,7 @@ const Usuario = () => {
 
     const deleteUsuario = async( usuarioToBeEliminated ) => {
         
-        const data = await deleteUsuarioAPI( usuarioToBeEliminated );
+        await deleteUsuarioAPI( usuarioToBeEliminated );
 
         setUsuarios( usuarios.filter( usuario => (
             usuario[ '_id' ] !== usuarioToBeEliminated[ '_id' ]

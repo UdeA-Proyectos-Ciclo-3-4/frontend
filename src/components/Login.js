@@ -37,25 +37,27 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-5 container-fluid">
+        <form className="mt-5 container-fluid">
             <h3 className="row justify-content-center">Iniciar Sesión</h3>
             <div className="mt-5 container-fluid col col-md-4">
                 <div className="m-auto row justify-content-center align-items-center">
                     <div className="mb-3">
-                        <label for="exampleFormControlInput1 " className="form-label">Correo electronico</label>
+                        <label htmlFor="correo " className="form-label">Correo electronico</label>
                         <input
-                        type="email"
-                        className="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder="correo@ejemplo.com"
+                            name="correo"
+                            type="email"
+                            className="form-control"
+                            id="correo"
+                            placeholder="correo@ejemplo.com"
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput1" className="form-label">Contraseña</label>
+                        <label htmlFor="contrasena" className="form-label">Contraseña</label>
                         <input
+                            name="contrasena"
                             type="password"
                             className="form-control"
-                            id="exampleFormControlInput1"
+                            id="contrasena"
                             placeholder="contraseña"
                         />
                     </div>
@@ -78,7 +80,7 @@ const Login = () => {
                     />
                 </div>
             </div>
-        </div>
+        </form>
     )
 }
 

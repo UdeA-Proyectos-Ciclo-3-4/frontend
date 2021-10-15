@@ -6,7 +6,7 @@ import TableProducts from './TableProducts';
 import NavbarProduct from './NavbarProduct';
 
 // Static Data
-import initialState, { initialStateProducts } from '../../data/products';
+import { initialStateProducts } from '../../data/products';
 
 const apiUrl = "http://localhost:5000/api/productos";
 
