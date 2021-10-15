@@ -33,6 +33,24 @@ const Vendedores = () => {
         return data;
     }
 
+    // ! (1) Peticion a la API para crear un nuevo registro
+    const addVendedorAPI = async ( newVendedor ) => {
+        /** Consulta para registrar data de productos en la API */
+        const response = await fetch( apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( newVendedor )
+        });
+
+        /** Obtiene la data */
+        let data  = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
     useEffect( () => {
         const getAllProducts = async () => {
             const data = await getVendedoresfromAPI();        // ! (2) Invoca la Peticion para obtener la data
@@ -41,7 +59,7 @@ const Vendedores = () => {
             /** Verifica si se obtubieron los datos existosamente */
             if ( data.success ) {
                 console.log( data );
-                setVendedores( data.productos );          // Asigna la data del API al State Component
+                setVendedores( data.vendedores );          // Asigna la data del API al State Component
             }
             else {
                 console.log(`Load static data`);
@@ -53,12 +71,14 @@ const Vendedores = () => {
 
     }, [] );
 
-    const addNewVendedor = ( newVendedor ) => {
-        //console.log( addNewVendedor, newVendedor );
+    const addNewVendedor = async ( newVendedor ) => {
+        const data = await addVendedorAPI( newVendedor );     // ! (2) Invoca la Peticion para obtener la data
+        console.log( 'UPDATE', data );
+        console.log( 'Vendedores', vendedores );
 
         setVendedores([
-            ...vendedores,
-            newVendedor
+            data.vendedor,
+            ...vendedores
         ]);
     }
 
