@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import Menu from '../Menu';
@@ -6,13 +6,52 @@ import TableVendedores from './TableVendedores';
 import NavbarVendedor from './NavbarVendedor';
 
 // Static Data
-import initialState from '../../data/vendedores';
+import { initialStateVendedores } from '../../data/vendedores';
+
+const apiUrl = "http://localhost:5000/api/vendedores";
 
 // Functional Component
-const Vendedor = () => {
+const Vendedores = () => {
 
     // State Component
-    const [ vendedores, setVendedores ] = useState( initialState );
+    const [ vendedores, setVendedores ] = useState([]);
+
+    // ! (1) Peticion a la API para obtener todos los registros
+    const getVendedoresfromAPI = async () => {
+        /** Consulta la data de productos a la API */
+        const response = await fetch( apiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        });
+
+        /** Obtiene la data */
+        let data  = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
+    useEffect( () => {
+        const getAllProducts = async () => {
+            const data = await getVendedoresfromAPI();        // ! (2) Invoca la Peticion para obtener la data
+            console.log( 'GET', data );
+
+            /** Verifica si se obtubieron los datos existosamente */
+            if ( data.success ) {
+                console.log( data );
+                setVendedores( data.productos );          // Asigna la data del API al State Component
+            }
+            else {
+                console.log(`Load static data`);
+                setVendedores( initialStateVendedores );    // Asigna la data por defecto (estatica) al State Component
+            }
+        }
+
+        getAllProducts();
+
+    }, [] );
 
     const addNewVendedor = ( newVendedor ) => {
         //console.log( addNewVendedor, newVendedor );
@@ -70,4 +109,4 @@ const Vendedor = () => {
     )
 };
 
-export default Vendedor;
+export default Vendedores;

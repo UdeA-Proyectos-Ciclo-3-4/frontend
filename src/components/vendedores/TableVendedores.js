@@ -10,7 +10,7 @@ const TableVendedores = ({ vendedores, setVendedores, deleteVendedor, updateVend
 
     return (
         <div>
-            {   vendedores.length <= 0
+            {   ! vendedores
                     ?   <p>No hay vendedores</p>
                     :   <Table className="table-vendedor" bordered hover size="sm">
                             <thead className="table-dark">
