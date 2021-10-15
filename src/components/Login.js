@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 
 
@@ -8,22 +8,28 @@ const idClientGoogle = '367337669931-s6d728je9j4p0nkq11u8r53s2an0hdeo.apps.googl
 // Functional Component
 const Login = () => {
 
+    const history = useHistory();
+
     const handleSuccessGoogle = async response => {
-        console.log( 'Success: ', response );
+        //console.log( 'Success: ', response );
 
-        const data = await fetch( `http://localhost:5004/api/auth/google-login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify({
-                tokenId: response.tokenId
-            })
-        });
+        const
+            dataResponse = await fetch( `http://localhost:5000/api/auth/google-login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify({
+                    tokenId: response.tokenId
+                })
+            }),
+            data = await dataResponse.json();
 
-        if( data ) {
-            console.log( 'data', data );
-        }
+            if( data ) {
+                console.log( data );
+                history.push( '/productos' );
+            }
+
     }
 
     const handleFailureGoogle = response => {
