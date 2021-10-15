@@ -51,6 +51,25 @@ const Vendedores = () => {
         return data;
     }
 
+    // ! (1) Peticion a la API para actualizar un registro
+    const updateVendedorAPI = async ( vendedor ) => {
+        console.log( `URL: ${ apiUrl }/${ vendedor._id }` );
+        /** Consulta para actualizar data de productos en la API */
+        const response = await fetch( `${ apiUrl }/${ vendedor._id }`, {
+            method: 'PUT'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( vendedor )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
     useEffect( () => {
         const getAllProducts = async () => {
             const data = await getVendedoresfromAPI();        // ! (2) Invoca la Peticion para obtener la data
@@ -82,7 +101,10 @@ const Vendedores = () => {
         ]);
     }
 
-    const updateVendedor = ( vendedorToUpdate ) => {
+    const updateVendedor = async ( vendedorToUpdate ) => {
+
+        const data = await updateVendedorAPI( vendedorToUpdate );     // ! (2) Invoca la Peticion para obtener la data
+        console.log( 'UPDATE', data );
 
         const listaVendedores = vendedores.filter( vendedor => (
             vendedor[ '_id' ] !== vendedorToUpdate[ '_id' ]
