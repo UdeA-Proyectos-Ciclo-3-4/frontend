@@ -129,7 +129,7 @@ const Vendedores = () => {
             vendedor[ '_id' ] !== vendedorToUpdate[ '_id' ]
         ));
 
-        listaVendedores.push( vendedorToUpdate );
+        listaVendedores.unshift( vendedorToUpdate );
 
         setVendedores( listaVendedores );
 

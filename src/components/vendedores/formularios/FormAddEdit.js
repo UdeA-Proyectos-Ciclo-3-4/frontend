@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button , } from 'react-bootstrap';
 
-//import { initialStateVendedores } from '../../../data/vendedores';
+import { initialStateVendedores } from '../../../data/vendedores';
 
 // Functional Component
 const FormAddEdit = ({ type, vendedor, setStateModal, updateVendedor, addNewVendedor }) => {
@@ -30,12 +30,14 @@ const FormAddEdit = ({ type, vendedor, setStateModal, updateVendedor, addNewVend
         
         if( type === 'edit' ) {
             updateVendedor( formVendedor );
-            
+            setFormVendedor( initialStateVendedores );
         }
         if( type === 'add' ) {
             addNewVendedor( formVendedor );
-            
+            setFormVendedor( initialStateVendedores );
         }
+
+        setStateModal( false );
     }
 
     return (

@@ -15,7 +15,6 @@ const TableVendedores = ({ vendedores, setVendedores, deleteVendedor, updateVend
                     :   <Table className="table-vendedor" bordered hover size="sm">
                             <thead className="table-dark">
                                 <tr>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Especialidad</th>
                                     <th scope="col">Celular</th>

@@ -18,8 +18,7 @@ const ItemVendedor = ({ vendedor, setVendedores, deleteVendedor, updateVendedor 
     }
 
     return (
-        <tr key={ vendedor._id }>
-            <td onClick={ handleShowVendedor }>{ vendedor[ '_id' ] }</td>
+        <tr>
             <td onClick={ handleShowVendedor }>{ vendedor[ 'nombre' ] }</td>
             <td onClick={ handleShowVendedor }>{ vendedor[ 'especialidad' ]}</td>
             <td onClick={ handleShowVendedor }>{ vendedor[ 'celular' ] }</td>
