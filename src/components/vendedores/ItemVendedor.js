@@ -5,6 +5,8 @@ import ModalDelete from '../modals/ModalDelete.js';
 import FormAddEdit from './formularios/FormAddEdit';
 import FormDelete from './formularios/FormDelete';
 
+import { convertDate } from '../../libs/convertDate';
+
 // Functional Component
 const ItemVendedor = ({ vendedor, setVendedores, deleteVendedor, updateVendedor }) => {
 
@@ -22,7 +24,7 @@ const ItemVendedor = ({ vendedor, setVendedores, deleteVendedor, updateVendedor 
             <td onClick={ handleShowVendedor }>{ vendedor[ 'nombre' ] }</td>
             <td onClick={ handleShowVendedor }>{ vendedor[ 'especialidad' ]}</td>
             <td onClick={ handleShowVendedor }>{ vendedor[ 'celular' ] }</td>
-            <td onClick={ handleShowVendedor }>{ vendedor[ 'fechaIngreso' ]}</td>
+            <td onClick={ handleShowVendedor }>{ convertDate(vendedor[ 'fechaIngreso' ])}</td>
             <td className="icons">
 
                 <ModalAddEdit
