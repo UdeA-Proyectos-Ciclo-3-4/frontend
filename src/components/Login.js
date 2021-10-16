@@ -68,8 +68,12 @@ const Login = () => {
                             ¿Olvidaste tu contraseña?
                         </p>
                     </Link>
-                    <hr />
+                    <div className="separador">
+                        <p className="texto"><span>or</span></p>
+                        <hr />
+                    </div>
                     <GoogleLogin
+                        className="btn-google"
                         clientId={ idClientGoogle }
                         buttonText="Login with Google"
                         onSuccess={ handleSuccessGoogle }

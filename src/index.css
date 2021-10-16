@@ -51,3 +51,17 @@ td.icons {
   margin: 0 0.5rem;
 
 }
+
+.btn-google{
+  margin: 1.4rem 0;
+}
+
+.separador{
+  text-align: center;
+  position:relative;
+}
+
+hr{
+  top: -1.7rem;
+  position: relative
+}
