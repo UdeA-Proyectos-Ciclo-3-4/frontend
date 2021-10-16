@@ -49,6 +49,43 @@ const Venta = () => {
         return data;
     }
 
+    // Peticion a la API para actualizar un registro
+    const updateVentaAPI = async ( ventaToUpdate ) => {
+        /** Consulta para actualizar data de productos en la API */
+        const response = await fetch( `${ apiUrl }/${ ventaToUpdate._id }`,{
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( ventaToUpdate )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
+    // Peticion a la API para actualizar un registro
+    const deleteVentaAPI = async ( ventaToUpdate ) => {
+        
+        /** Consulta para actualizar data de productos en la API */
+        const response = await fetch( `${ apiUrl }/${ ventaToUpdate._id }`, {
+            method: 'DELETE'                                                               ,
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( ventaToUpdate )
+        });
+
+        /** Obtiene la data */
+        const data = await response.json();
+        console.log( data );
+
+        return data;
+    }
+
     useEffect(() => {
         const getAllVentas = async() => {
             const data = await getVentasfromAPI();
@@ -72,30 +109,33 @@ const Venta = () => {
         const data = await addVentaAPI( newVenta );
 
         console.log( 'UPDATE', data );
-        
+
         setVentas([
             data.venta,
             ...ventas
         ]);
     }
 
-    const updateVenta = ( VentasToUpdate ) => {
+    const updateVenta = async ( ventaToUpdate ) => {
 
-        const listaVentas = ventas.filter( ventas => (
-            ventas[ '_id' ] !== VentasToUpdate[ '_id' ]
-        ));
+        const data = await updateVentaAPI( ventaToUpdate );
 
-        listaVentas.push( VentasToUpdate );
+        const listaVentas = ventas.filter( venta => (
+            venta[ '_id' ] !== ventaToUpdate[ '_id' ]
+        )); 
+
+        listaVentas.unshift( data.venta );
 
         setVentas( listaVentas );
 
     }
 
-    const deleteVenta = ( VentasToBeEliminated ) => {
-        //console.log( 'deleteVentas', VentasToBeEliminated );
+    const deleteVenta = async( VentasToBeEliminated ) => {
+        
+        const data = await deleteVentaAPI( VentasToBeEliminated);
 
-        setVentas( ventas.filter( Ventas => (
-            Ventas[ '_id' ] !== VentasToBeEliminated[ '_id' ]
+        setVentas( ventas.filter( venta => (
+            venta[ '_id' ] !== VentasToBeEliminated[ '_id' ]
         )));
     }
 
