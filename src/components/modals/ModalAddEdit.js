@@ -2,7 +2,9 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 // Functional Component
+
 const ModalAddEdit = ({ title, type, component, stateModal, setStateModal }) => {
+
 
     const handleCloseModal = () => {
         console.log( 'Click handleCloseModal' );
@@ -43,3 +45,4 @@ const ModalAddEdit = ({ title, type, component, stateModal, setStateModal }) => 
 }
 
 export default ModalAddEdit;
+

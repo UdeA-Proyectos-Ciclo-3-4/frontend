@@ -44,5 +44,6 @@ const ModalDelete = ({ title, component, stateModal, setStateModal }) => {
     )
 }
 
+
 export default ModalDelete;
 

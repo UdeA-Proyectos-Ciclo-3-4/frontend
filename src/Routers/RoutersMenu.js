@@ -5,8 +5,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from "../components/Login";
 import Productos from '../components/products/Products';
 import Usuarios from "../components/usuarios/Usuario";
-import Vendedores from "../components/Vendedores";
-import Ventas from "../components/Ventas";
+import Vendedores from '../components/vendedores/Vendedores';
+import Ventas from '../components/Ventas';
+
 
 // Functional Component
 const RoutersMenu = () => {
