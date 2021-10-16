@@ -9,13 +9,12 @@ const ventas = [
 export default ventas;
 
 export const initialStateVentas = {
-    N_Factura: '',
+    factura: '',
     cliente: '',
-    Descripcion: '',
-    Total: '',
-    FechaInicial: '',
-    FechaPago: '',
-    Responsable: '',
-    Estado:''
+    descripcion: '',
+    total: '',
+    fechaPago: '',
+    responsable: '',
+    estado:''
 
 };

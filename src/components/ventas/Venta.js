@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import Menu from '../Menu';
@@ -6,20 +6,76 @@ import TablaVentas from './TablaVentas';
 import NavbarVentas from './NavbarVentas';
 
 // Static Data
-import initialState from '../../data/ventas';
-console.log(initialState)
+import initialStateVentas from '../../data/ventas';
+
+const apiUrl = "http://localhost:5000/api/ventas";
+
 // Functional Component
 const Venta = () => {
 
     // State Component
-    const [ ventas, setVentas ] = useState( initialState );
-    console.log( ventas )
-    const addNewVenta = ( newVenta ) => {
-        //console.log( addNewVenta, newVenta );
+    const
+        [ ventas, setVentas ] = useState([]);
+    
+    const getVentasfromAPI = async() => {
+        /** Consulta la data de productos a la API */
+        const response = await fetch( apiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        });
 
+        /** Obtiene la data */
+        let data = await response.json();
+        console.log(data);
+
+        return data;
+    }
+
+
+    //Peticion a la API para crear un nuevo registro
+    const addVentaAPI = async( newVenta ) => {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( newVenta )
+        });
+
+        let data = await response.json();
+        console.log(data);
+        return data;
+    }
+
+    useEffect(() => {
+        const getAllVentas = async() => {
+            const data = await getVentasfromAPI();
+            console.log( 'GET', data );
+
+            if( data.success){
+                console.log(data);
+                setVentas(data.ventas);
+            }else{
+                console.log(`Load static data`);
+                setVentas(initialStateVentas);
+            }
+        }
+        getAllVentas();
+
+    }, []);
+
+
+    const addNewVenta = async( newVenta ) => {
+        
+        const data = await addVentaAPI( newVenta );
+
+        console.log( 'UPDATE', data );
+        
         setVentas([
-            ...ventas,
-            newVenta
+            data.venta,
+            ...ventas
         ]);
     }
 
@@ -55,7 +111,7 @@ const Venta = () => {
 
                     <NavbarVentas
                         title={ "Listado de ventas" }
-                        addNewVentas={ addNewVenta }
+                        addNewVenta={ addNewVenta }
                     />
                     <TablaVentas
                         ventas={ ventas }

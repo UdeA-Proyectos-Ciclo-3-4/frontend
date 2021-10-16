@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 import ModalAddEdit from '../modals/ModalAddEdit';
-import ModalDelete from '../modals/ModalDelete.js';
+import ModalDelete from '../modals/ModalDelete';
 import FormAddEdit from './forms/FormAddEdit';
 import FormDelete from './forms/FormDelete';
+
+import { convertDate } from '../../libs/convertDate';
 
 // Functional Component
 const ItemVentas = ({ venta, setVentas, deleteVenta, updateVenta }) => {
@@ -19,15 +21,13 @@ const ItemVentas = ({ venta, setVentas, deleteVenta, updateVenta }) => {
 
     return (
         <tr key={ venta._id }>
-            <td onClick={ handleShowVenta }>{ venta[ '_id' ] }</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'N_Factura' ] }</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'factura' ] }</td>
             <td onClick={ handleShowVenta }>{ venta[ 'cliente' ]}</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'Descripcion' ] }</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'Total' ]}</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'FechaInicial' ]}</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'FechaPago' ]}</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'Responsable' ]}</td>
-            <td onClick={ handleShowVenta }>{ venta[ 'Estado' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'descripcion' ] }</td>
+            <td onClick={ handleShowVenta }>${ venta[ 'total' ]}</td>
+            <td onClick={ handleShowVenta }>{ convertDate (venta[ 'fechaPago' ])}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'responsable' ]}</td>
+            <td onClick={ handleShowVenta }>{ venta[ 'estado' ]}</td>
             <td className="icons">
 
                 <ModalAddEdit

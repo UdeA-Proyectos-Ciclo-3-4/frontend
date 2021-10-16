@@ -6,7 +6,7 @@ import FormAddEdit from './forms/FormAddEdit';
 import { initialStateVentas } from '../../data/ventas';
 
 // Functional Component
-const NavbarVentas = ({ title, addNewVentas }) => {
+const NavbarVentas = ({ title, addNewVenta }) => {
 
     // State Component
     const
@@ -22,7 +22,7 @@ const NavbarVentas = ({ title, addNewVentas }) => {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <ModalAddEdit
-                                title={ "Agregar Ventas" }
+                                title={ "Agregar Venta" }
                                 type={ "add" }
                                 stateModal={ stateModalAdd }
                                 setStateModal={ setStateModalAdd }
@@ -32,7 +32,7 @@ const NavbarVentas = ({ title, addNewVentas }) => {
                                         venta={ venta }
                                         setVenta={ setVenta }
                                         setStateModal={ setStateModalAdd }
-                                        addNewVentas={ addNewVentas }
+                                        addNewVenta={ addNewVenta }
                                     />
                                 }
                             />

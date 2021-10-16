@@ -4,12 +4,12 @@ import { Modal, Button , Form} from 'react-bootstrap';
 import { initialStateVentas } from '../../../data/ventas';
 
 // Functional Component
-const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =>{
+const FormAddEdit = ({ type, venta, setVentas, setStateModal, updateVenta, addNewVenta }) =>{
 // console.log(venta)
     // State Component
     const [ formVenta, setFormVenta ] = useState( venta );
     // console.log(formVenta)
-    const { N_Factura, cliente, Descripcion, Total, FechaInicial, FechaPago, Responsable, Estado } = formVenta;
+    const { factura, cliente, descripcion, total, fechaPago, responsable, estado } = formVenta;
 
     const handleCloseModal = () => {
         console.log( 'Click handleCloseModal' );
@@ -28,15 +28,17 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
         console.log( 'handleSubmit Add/Edit', type );
 
         
+        if( type === 'add' ) {
+
+            addNewVenta(formVenta);
+            
+            setFormVenta(initialStateVentas);
+        }
         if( type === 'edit' ) {
             updateVenta( formVenta );
-            setFormVenta(initialStateVentas)
+            setFormVenta(initialStateVentas);
         }
-        if( type === 'add' ) {
-            addNewVenta( formVenta );
-            setFormVenta(initialStateVentas)
-        }
-        setStateModal( false )
+        setStateModal( false );
     }
 
     return (
@@ -48,8 +50,8 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Ej: 001"
-                    name="N_Factura"
-                    value={ N_Factura }
+                    name="factura"
+                    value={ factura }
                     onChange={ handleChange }
                 />
             </div>
@@ -72,8 +74,8 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Ej. Tennis"
-                    name="Descripcion"
-                    value={ Descripcion }
+                    name="descripcion"
+                    value={ descripcion }
                     onChange={ handleChange }
                 />
             </div>
@@ -84,20 +86,8 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Ej: $ 100.000"
-                    name="Total"
-                    value={ Total }
-                    onChange={ handleChange }
-                />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Inicial</label>
-                <input
-                    type="date"
-                    className="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Ej. 2021-09-01"
-                    name="FechaInicial"
-                    value={ FechaInicial }
+                    name="total"
+                    value={ total }
                     onChange={ handleChange }
                 />
             </div>
@@ -108,8 +98,8 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Ej. 2021-09-01"
-                    name="FechaPago"
-                    value={ FechaPago }
+                    name="fechaPago"
+                    value={ fechaPago }
                     onChange={ handleChange }
                 />
             </div>
@@ -120,14 +110,14 @@ const FormAddEdit = ({ type, venta, setStateModal, updateVenta, addNewVenta }) =
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Ej. Luisa"
-                    name="Responsable"
-                    value={ Responsable }
+                    name="responsable"
+                    value={ responsable }
                     onChange={ handleChange }
                 />
             </div>
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Estado</label>
-                <Form.Select name = "Estado"  value = {Estado } as="select" onChange={handleChange} aria-label="Default select example">
+                <Form.Select name = "estado"  value = {estado } as="select" onChange={handleChange} aria-label="Default select example">
                     <option>Seleccione...</option>
                     <option value="Creacion" >Creacion</option>
                     <option value="Embalaje" >Embalaje</option>
