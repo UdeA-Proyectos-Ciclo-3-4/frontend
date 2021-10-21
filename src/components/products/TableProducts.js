@@ -10,7 +10,7 @@ const TableProducts = ({ products, setProducts, deleteProduct, updateProduct }) 
 
     return (
         <div>
-            {   ! products
+            {   products.length <= 0
                     ?   <p>No hay productos</p>
                     :   <Table className="table-product" bordered hover size="sm">
                             <thead className="table-dark">

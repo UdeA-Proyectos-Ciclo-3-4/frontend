@@ -10,7 +10,7 @@ const TableUsuarios = ({ usuarios, setUsuarios, deleteUsuario, updateUsuario }) 
 
     return (
         <div>
-            {   usuarios.length <=0
+            {   usuarios.length <= 0
                     ?   <p>No hay usuarios</p>
                     :   <Table className="table-usuarios" bordered hover size="sm">
                             <thead className="table-dark">
