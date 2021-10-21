@@ -8,7 +8,7 @@ import NavbarProduct from './NavbarProduct';
 // Static Data
 import { initialStateProducts } from '../../data/products';
 
-const apiUrl = "https://peaceful-springs-82264.herokuapp.com/api/productos";
+const apiUrl = `${ process.env.REACT_APP_API_URL }/api/productos`;
 
 // Functional Component
 const Products = () => {

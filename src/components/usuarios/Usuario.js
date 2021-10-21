@@ -8,7 +8,7 @@ import NavbarUsuario from './NavbarUsuario';
 // Static Data
 import {initialStateUsuarios} from '../../data/usuarios';
 
-const apiUrl = "https://peaceful-springs-82264.herokuapp.com/api/usuarios";
+const apiUrl = `${ process.env.REACT_APP_API_URL }/api/usuarios`;
 
 // Functional Component
 const Usuario = () => {

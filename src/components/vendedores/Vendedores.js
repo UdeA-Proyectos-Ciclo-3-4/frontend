@@ -8,7 +8,7 @@ import NavbarVendedor from './NavbarVendedor';
 // Static Data
 import { initialStateVendedores } from '../../data/vendedores';
 
-const apiUrl = "https://peaceful-springs-82264.herokuapp.com/api/vendedores";
+const apiUrl = `${ process.env.REACT_APP_API_URL }/api/vendedores`;
 
 // Functional Component
 const Vendedores = () => {

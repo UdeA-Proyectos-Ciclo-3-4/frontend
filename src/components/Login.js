@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 
-
 const idClientGoogle = '367337669931-s6d728je9j4p0nkq11u8r53s2an0hdeo.apps.googleusercontent.com';
 
 // Functional Component
@@ -11,10 +10,9 @@ const Login = () => {
     const history = useHistory();
 
     const handleSuccessGoogle = async response => {
-        //console.log( 'Success: ', response );
 
         const
-            dataResponse = await fetch( `https://peaceful-springs-82264.herokuapp.com/api/auth/google-login`, {
+            dataResponse = await fetch( `${ process.env.REACT_APP_API_URL }/api/auth/google-login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
