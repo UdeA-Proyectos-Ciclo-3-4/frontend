@@ -14,7 +14,7 @@ const Login = () => {
         //console.log( 'Success: ', response );
 
         const
-            dataResponse = await fetch( `http://localhost:5000/api/auth/google-login`, {
+            dataResponse = await fetch( `https://peaceful-springs-82264.herokuapp.com/api/auth/google-login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'

@@ -6,9 +6,9 @@ import TableProducts from './TableProducts';
 import NavbarProduct from './NavbarProduct';
 
 // Static Data
-import initialState, { initialStateProducts } from '../../data/products';
+import { initialStateProducts } from '../../data/products';
 
-const apiUrl = "http://localhost:5000/api/productos";
+const apiUrl = "https://peaceful-springs-82264.herokuapp.com/api/productos";
 
 // Functional Component
 const Products = () => {

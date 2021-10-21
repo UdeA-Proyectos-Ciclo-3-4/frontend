@@ -8,7 +8,7 @@ import NavbarVentas from './NavbarVentas';
 // Static Data
 import initialStateVentas from '../../data/ventas';
 
-const apiUrl = "http://localhost:5000/api/ventas";
+const apiUrl = "https://peaceful-springs-82264.herokuapp.com/api/ventas";
 
 // Functional Component
 const Venta = () => {
