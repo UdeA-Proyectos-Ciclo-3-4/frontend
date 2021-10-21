@@ -46,7 +46,7 @@ const Usuarios = () => {
                             <Modal.Body>
 
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
                                 </div>
                                 <div className="form-floating">
@@ -56,7 +56,7 @@ const Usuarios = () => {
                                         <option value="2">Vendedor</option>
                                         <option value="3">Comprador</option>
                                     </select>
-                                    <label for="floatingSelect">Roles</label>
+                                    <label htmlFor="floatingSelect">Roles</label>
                                 </div>
 
                             </Modal.Body>
@@ -82,7 +82,7 @@ const Usuarios = () => {
                             <Modal.Body>
 
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Ej. Eva Sofia" />
                                 </div>
                                 <div className="form-floating">
@@ -92,7 +92,7 @@ const Usuarios = () => {
                                         <option value="2">Vendedor</option>
                                         <option value="3">Comprador</option>
                                     </select>
-                                    <label for="floatingSelect">Roles</label>
+                                    <label htmlFor="floatingSelect">Roles</label>
                                 </div>
 
                             </Modal.Body>

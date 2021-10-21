@@ -43,7 +43,7 @@ const Vendedores = () => {
                             </Modal.Header>
                             <Modal.Body>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -52,7 +52,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Especialidad</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Especialidad</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -61,7 +61,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Celular</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Celular</label>
                                     <input
                                         type="tel"
                                         className="form-control"
@@ -70,7 +70,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
                                     <input
                                         type="date"
                                         className="form-control"
@@ -100,7 +100,7 @@ const Vendedores = () => {
                             </Modal.Header>
                             <Modal.Body>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Nombres</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Nombres</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -109,7 +109,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Especialidad</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Especialidad</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -118,7 +118,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Celular</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Celular</label>
                                     <input
                                         type="tel"
                                         className="form-control"
@@ -127,7 +127,7 @@ const Vendedores = () => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Ingreso</label>
                                     <input
                                         type="date"
                                         className="form-control"

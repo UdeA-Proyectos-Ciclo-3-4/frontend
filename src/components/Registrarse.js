@@ -28,7 +28,7 @@ const Registrarse = () => {
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput2 " className="form-label">Correo electronico</label>
+                        <label htmlFor="exampleFormControlInput2 " className="form-label">Correo electronico</label>
                         <input
                             type="email"
                             className="form-control"
@@ -38,7 +38,7 @@ const Registrarse = () => {
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput3" className="form-label">Contraseña</label>
+                        <label htmlFor="exampleFormControlInput3" className="form-label">Contraseña</label>
                         <input
                             type="password"
                             className="form-control"
@@ -48,7 +48,7 @@ const Registrarse = () => {
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput4" className="form-label">Confirmar Contraseña</label>
+                        <label htmlFor="exampleFormControlInput4" className="form-label">Confirmar Contraseña</label>
                         <input
                             type="password"
                             className="form-control"

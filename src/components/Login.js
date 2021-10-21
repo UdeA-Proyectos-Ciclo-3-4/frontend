@@ -40,7 +40,7 @@ const Login = () => {
             <div className="mt-5 container-fluid col col-md-4">
                 <div className="m-auto row justify-content-center align-items-center">
                     <div className="mb-3">
-                        <label for="exampleFormControlInput1 " className="form-label">Correo electronico</label>
+                        <label htmlFor="exampleFormControlInput1 " className="form-label">Correo electronico</label>
                         <input
                         type="email"
                         className="form-control"
@@ -49,7 +49,7 @@ const Login = () => {
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput1" className="form-label">Contraseña</label>
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Contraseña</label>
                         <input
                             type="password"
                             className="form-control"

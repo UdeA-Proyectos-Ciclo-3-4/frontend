@@ -44,7 +44,7 @@ const Ventas = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Cliente</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Cliente</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -53,7 +53,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Descripcion</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Descripcion</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -62,7 +62,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Total</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Total</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -71,7 +71,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Fecha Inicial</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Inicial</label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -80,7 +80,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Fecha Pago</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Pago</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -89,7 +89,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Responsable</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Responsable</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -98,7 +98,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Estado</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Estado</label>
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                                         Seleccione estado de la venta
@@ -135,7 +135,7 @@ const Ventas = () => {
                         </Modal.Header>
                         <Modal.Body>
                         <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Cliente</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Cliente</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -144,7 +144,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Descripcion</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Descripcion</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -153,7 +153,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Total</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Total</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -162,7 +162,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Fecha Inicial</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Inicial</label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -171,7 +171,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Fecha Pago</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Fecha Pago</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -180,7 +180,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Responsable</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Responsable</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -189,7 +189,7 @@ const Ventas = () => {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label for="exampleFormControlInput1" className="form-label">Estado</label>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Estado</label>
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                                         Seleccione estado de la venta
